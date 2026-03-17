@@ -1,1 +1,1 @@
-# Personalized-Learning-Path-Generator
+# Learning-Path-Generator
