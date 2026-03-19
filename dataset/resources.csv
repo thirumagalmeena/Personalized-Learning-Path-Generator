@@ -1,0 +1,447 @@
+resource_id,skill_id,resource_type,resource_title,difficulty,estimated_time,url
+1,1,book,Clean Code by Robert C. Martin,Beginner,26,https://www.oreilly.com/library/view/clean-code/9780136083238/
+2,1,video,freeCodeCamp Full Programming Bootcamp,Beginner,14,https://www.youtube.com/watch?v=zOjov-2OZ0E
+3,2,video,freeCodeCamp Full Programming Bootcamp,Intermediate,13,https://www.youtube.com/watch?v=zOjov-2OZ0E
+4,2,course,Coursera Algorithms Specialization (Stanford),Intermediate,25,https://www.coursera.org/specializations/algorithms
+5,3,article,GeeksforGeeks Programming Tutorials,Advanced,4,https://www.geeksforgeeks.org/
+6,3,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Advanced,32,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+7,4,course,Coursera Algorithms Specialization (Stanford),Intermediate,29,https://www.coursera.org/specializations/algorithms
+8,4,book,Clean Code by Robert C. Martin,Intermediate,23,https://www.oreilly.com/library/view/clean-code/9780136083238/
+9,5,book,Clean Code by Robert C. Martin,Intermediate,34,https://www.oreilly.com/library/view/clean-code/9780136083238/
+10,5,video,CS50x Introduction to Computer Science (Harvard),Intermediate,20,https://cs50.harvard.edu/x/
+11,5,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Intermediate,29,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+12,6,book,Introduction to Algorithms (CLRS),Advanced,41,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+13,6,course,Coursera Algorithms Specialization (Stanford),Advanced,34,https://www.coursera.org/specializations/algorithms
+14,6,article,GeeksforGeeks Programming Tutorials,Advanced,6,https://www.geeksforgeeks.org/
+15,7,course,Coursera Algorithms Specialization (Stanford),Advanced,31,https://www.coursera.org/specializations/algorithms
+16,7,article,GeeksforGeeks Programming Tutorials,Advanced,4,https://www.geeksforgeeks.org/
+17,8,video,freeCodeCamp Full Programming Bootcamp,Intermediate,10,https://www.youtube.com/watch?v=zOjov-2OZ0E
+18,8,video,CS50x Introduction to Computer Science (Harvard),Intermediate,25,https://cs50.harvard.edu/x/
+19,8,course,Coursera Algorithms Specialization (Stanford),Intermediate,36,https://www.coursera.org/specializations/algorithms
+20,9,book,The Pragmatic Programmer by Hunt & Thomas,Beginner,23,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+21,9,video,freeCodeCamp Full Programming Bootcamp,Beginner,13,https://www.youtube.com/watch?v=zOjov-2OZ0E
+22,10,book,Clean Code by Robert C. Martin,Beginner,37,https://www.oreilly.com/library/view/clean-code/9780136083238/
+23,10,video,freeCodeCamp Full Programming Bootcamp,Beginner,14,https://www.youtube.com/watch?v=zOjov-2OZ0E
+24,11,article,GeeksforGeeks Programming Tutorials,Intermediate,6,https://www.geeksforgeeks.org/
+25,11,book,Clean Code by Robert C. Martin,Intermediate,35,https://www.oreilly.com/library/view/clean-code/9780136083238/
+26,11,book,Introduction to Algorithms (CLRS),Intermediate,29,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+27,12,video,freeCodeCamp Full Programming Bootcamp,Intermediate,9,https://www.youtube.com/watch?v=zOjov-2OZ0E
+28,12,article,GeeksforGeeks Programming Tutorials,Intermediate,6,https://www.geeksforgeeks.org/
+29,13,book,The Pragmatic Programmer by Hunt & Thomas,Intermediate,28,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+30,13,book,Introduction to Algorithms (CLRS),Intermediate,49,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+31,14,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Advanced,48,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+32,14,article,GeeksforGeeks Programming Tutorials,Advanced,6,https://www.geeksforgeeks.org/
+33,15,video,CS50x Introduction to Computer Science (Harvard),Intermediate,24,https://cs50.harvard.edu/x/
+34,15,book,Clean Code by Robert C. Martin,Intermediate,23,https://www.oreilly.com/library/view/clean-code/9780136083238/
+35,16,book,The Pragmatic Programmer by Hunt & Thomas,Advanced,31,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+36,16,article,GeeksforGeeks Programming Tutorials,Advanced,5,https://www.geeksforgeeks.org/
+37,16,book,Introduction to Algorithms (CLRS),Advanced,36,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+38,17,book,Clean Code by Robert C. Martin,Advanced,34,https://www.oreilly.com/library/view/clean-code/9780136083238/
+39,17,video,freeCodeCamp Full Programming Bootcamp,Advanced,14,https://www.youtube.com/watch?v=zOjov-2OZ0E
+40,18,video,freeCodeCamp Full Programming Bootcamp,Intermediate,9,https://www.youtube.com/watch?v=zOjov-2OZ0E
+41,18,article,GeeksforGeeks Programming Tutorials,Intermediate,4,https://www.geeksforgeeks.org/
+42,19,course,Coursera Algorithms Specialization (Stanford),Advanced,22,https://www.coursera.org/specializations/algorithms
+43,19,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Advanced,33,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+44,19,video,freeCodeCamp Full Programming Bootcamp,Advanced,14,https://www.youtube.com/watch?v=zOjov-2OZ0E
+45,20,video,CS50x Introduction to Computer Science (Harvard),Advanced,31,https://cs50.harvard.edu/x/
+46,20,book,Introduction to Algorithms (CLRS),Advanced,49,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+47,20,video,freeCodeCamp Full Programming Bootcamp,Advanced,15,https://www.youtube.com/watch?v=zOjov-2OZ0E
+48,21,book,The Pragmatic Programmer by Hunt & Thomas,Advanced,18,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+49,21,book,Clean Code by Robert C. Martin,Advanced,31,https://www.oreilly.com/library/view/clean-code/9780136083238/
+50,22,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Intermediate,50,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+51,22,video,freeCodeCamp Full Programming Bootcamp,Intermediate,11,https://www.youtube.com/watch?v=zOjov-2OZ0E
+52,22,course,Coursera Algorithms Specialization (Stanford),Intermediate,30,https://www.coursera.org/specializations/algorithms
+53,23,article,GeeksforGeeks Programming Tutorials,Intermediate,4,https://www.geeksforgeeks.org/
+54,23,book,The Pragmatic Programmer by Hunt & Thomas,Intermediate,26,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+55,24,book,The Pragmatic Programmer by Hunt & Thomas,Advanced,19,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+56,24,video,CS50x Introduction to Computer Science (Harvard),Advanced,28,https://cs50.harvard.edu/x/
+57,24,video,freeCodeCamp Full Programming Bootcamp,Advanced,11,https://www.youtube.com/watch?v=zOjov-2OZ0E
+58,25,book,The Pragmatic Programmer by Hunt & Thomas,Intermediate,27,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+59,25,video,CS50x Introduction to Computer Science (Harvard),Intermediate,22,https://cs50.harvard.edu/x/
+60,26,video,StatQuest with Josh Starmer,Intermediate,14,https://www.youtube.com/@statquest
+61,26,course,Kaggle Learn Free Data Science Courses,Intermediate,19,https://www.kaggle.com/learn
+62,26,video,Data School YouTube Channel,Intermediate,8,https://www.youtube.com/@dataschool
+63,27,course,Kaggle Learn Free Data Science Courses,Intermediate,16,https://www.kaggle.com/learn
+64,27,video,Data School YouTube Channel,Intermediate,12,https://www.youtube.com/@dataschool
+65,27,video,StatQuest with Josh Starmer,Intermediate,14,https://www.youtube.com/@statquest
+66,28,video,StatQuest with Josh Starmer,Advanced,16,https://www.youtube.com/@statquest
+67,28,article,Towards Data Science Medium Publication,Advanced,6,https://towardsdatascience.com/
+68,29,course,Kaggle Learn Free Data Science Courses,Intermediate,25,https://www.kaggle.com/learn
+69,29,article,Towards Data Science Medium Publication,Intermediate,4,https://towardsdatascience.com/
+70,30,video,Data School YouTube Channel,Intermediate,11,https://www.youtube.com/@dataschool
+71,30,book,The Elements of Statistical Learning,Intermediate,52,https://hastie.su.domains/ElemStatLearn/
+72,31,video,StatQuest with Josh Starmer,Beginner,13,https://www.youtube.com/@statquest
+73,31,book,The Elements of Statistical Learning,Beginner,57,https://hastie.su.domains/ElemStatLearn/
+74,31,book,Hands-On Machine Learning by Aurélien Géron,Beginner,34,https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
+75,32,article,Towards Data Science Medium Publication,Advanced,5,https://towardsdatascience.com/
+76,32,course,Kaggle Learn Free Data Science Courses,Advanced,24,https://www.kaggle.com/learn
+77,32,book,Python for Data Analysis by Wes McKinney,Advanced,20,https://www.oreilly.com/library/view/python-for-data/9781491957653/
+78,33,video,StatQuest with Josh Starmer,Intermediate,19,https://www.youtube.com/@statquest
+79,33,course,Coursera Data Science Specialization (Johns Hopkins),Intermediate,51,https://www.coursera.org/specializations/jhu-data-science
+80,33,course,Kaggle Learn Free Data Science Courses,Intermediate,20,https://www.kaggle.com/learn
+81,34,book,The Elements of Statistical Learning,Beginner,37,https://hastie.su.domains/ElemStatLearn/
+82,34,course,Coursera Data Science Specialization (Johns Hopkins),Beginner,29,https://www.coursera.org/specializations/jhu-data-science
+83,35,video,Data School YouTube Channel,Advanced,12,https://www.youtube.com/@dataschool
+84,35,book,Hands-On Machine Learning by Aurélien Géron,Advanced,38,https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
+85,35,book,The Elements of Statistical Learning,Advanced,64,https://hastie.su.domains/ElemStatLearn/
+86,36,course,Kaggle Learn Free Data Science Courses,Intermediate,21,https://www.kaggle.com/learn
+87,36,book,The Elements of Statistical Learning,Intermediate,46,https://hastie.su.domains/ElemStatLearn/
+88,36,video,Data School YouTube Channel,Intermediate,12,https://www.youtube.com/@dataschool
+89,37,video,Data School YouTube Channel,Intermediate,9,https://www.youtube.com/@dataschool
+90,37,course,Coursera Data Science Specialization (Johns Hopkins),Intermediate,36,https://www.coursera.org/specializations/jhu-data-science
+91,37,course,Kaggle Learn Free Data Science Courses,Intermediate,25,https://www.kaggle.com/learn
+92,38,book,The Elements of Statistical Learning,Beginner,42,https://hastie.su.domains/ElemStatLearn/
+93,38,course,Coursera Data Science Specialization (Johns Hopkins),Beginner,35,https://www.coursera.org/specializations/jhu-data-science
+94,39,article,Towards Data Science Medium Publication,Advanced,6,https://towardsdatascience.com/
+95,39,course,Kaggle Learn Free Data Science Courses,Advanced,17,https://www.kaggle.com/learn
+96,40,book,The Elements of Statistical Learning,Advanced,49,https://hastie.su.domains/ElemStatLearn/
+97,40,article,Towards Data Science Medium Publication,Advanced,4,https://towardsdatascience.com/
+98,41,book,Hands-On Machine Learning by Aurélien Géron,Advanced,27,https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
+99,41,book,Python for Data Analysis by Wes McKinney,Advanced,20,https://www.oreilly.com/library/view/python-for-data/9781491957653/
+100,42,book,Python for Data Analysis by Wes McKinney,Advanced,21,https://www.oreilly.com/library/view/python-for-data/9781491957653/
+101,42,course,Coursera Data Science Specialization (Johns Hopkins),Advanced,51,https://www.coursera.org/specializations/jhu-data-science
+102,43,course,Kaggle Learn Free Data Science Courses,Intermediate,17,https://www.kaggle.com/learn
+103,43,book,Python for Data Analysis by Wes McKinney,Intermediate,25,https://www.oreilly.com/library/view/python-for-data/9781491957653/
+104,44,video,Data School YouTube Channel,Beginner,8,https://www.youtube.com/@dataschool
+105,44,course,Kaggle Learn Free Data Science Courses,Beginner,23,https://www.kaggle.com/learn
+106,45,video,StatQuest with Josh Starmer,Intermediate,14,https://www.youtube.com/@statquest
+107,45,article,Towards Data Science Medium Publication,Intermediate,5,https://towardsdatascience.com/
+108,45,video,Data School YouTube Channel,Intermediate,9,https://www.youtube.com/@dataschool
+109,46,course,Hugging Face NLP Course (Free),Intermediate,16,https://huggingface.co/learn/nlp-course/
+110,46,article,Papers With Code Trending Research,Intermediate,5,https://paperswithcode.com/
+111,47,course,fast.ai Practical Deep Learning for Coders,Beginner,30,https://course.fast.ai/
+112,47,book,"Deep Learning by Goodfellow, Bengio & Courville",Beginner,53,https://www.deeplearningbook.org/
+113,48,course,Hugging Face NLP Course (Free),Intermediate,22,https://huggingface.co/learn/nlp-course/
+114,48,video,Stanford CS231n Convolutional Neural Networks,Intermediate,25,https://cs231n.stanford.edu/
+115,48,book,"Deep Learning by Goodfellow, Bengio & Courville",Intermediate,58,https://www.deeplearningbook.org/
+116,49,course,Hugging Face NLP Course (Free),Intermediate,17,https://huggingface.co/learn/nlp-course/
+117,49,course,fast.ai Practical Deep Learning for Coders,Intermediate,37,https://course.fast.ai/
+118,50,book,Pattern Recognition and Machine Learning by Bishop,Intermediate,68,https://www.springer.com/gp/book/9780387310732
+119,50,course,fast.ai Practical Deep Learning for Coders,Intermediate,31,https://course.fast.ai/
+120,50,book,"Deep Learning by Goodfellow, Bengio & Courville",Intermediate,35,https://www.deeplearningbook.org/
+121,51,course,Hugging Face NLP Course (Free),Advanced,16,https://huggingface.co/learn/nlp-course/
+122,51,video,Stanford CS231n Convolutional Neural Networks,Advanced,17,https://cs231n.stanford.edu/
+123,51,book,"Deep Learning by Goodfellow, Bengio & Courville",Advanced,48,https://www.deeplearningbook.org/
+124,52,course,Hugging Face NLP Course (Free),Advanced,19,https://huggingface.co/learn/nlp-course/
+125,52,article,Papers With Code Trending Research,Advanced,5,https://paperswithcode.com/
+126,52,course,fast.ai Practical Deep Learning for Coders,Advanced,31,https://course.fast.ai/
+127,53,video,3Blue1Brown Neural Networks Series,Advanced,3,https://www.youtube.com/watch?v=aircAruvnKk
+128,53,course,Hugging Face NLP Course (Free),Advanced,24,https://huggingface.co/learn/nlp-course/
+129,53,article,Papers With Code Trending Research,Advanced,4,https://paperswithcode.com/
+130,54,course,fast.ai Practical Deep Learning for Coders,Advanced,30,https://course.fast.ai/
+131,54,article,Papers With Code Trending Research,Advanced,6,https://paperswithcode.com/
+132,55,video,Stanford CS231n Convolutional Neural Networks,Intermediate,26,https://cs231n.stanford.edu/
+133,55,course,DeepLearning.AI Deep Learning Specialization,Intermediate,34,https://www.coursera.org/specializations/deep-learning
+134,56,course,fast.ai Practical Deep Learning for Coders,Intermediate,25,https://course.fast.ai/
+135,56,book,"Deep Learning by Goodfellow, Bengio & Courville",Intermediate,36,https://www.deeplearningbook.org/
+136,56,video,Stanford CS231n Convolutional Neural Networks,Intermediate,26,https://cs231n.stanford.edu/
+137,57,book,"Deep Learning by Goodfellow, Bengio & Courville",Advanced,54,https://www.deeplearningbook.org/
+138,57,course,Hugging Face NLP Course (Free),Advanced,16,https://huggingface.co/learn/nlp-course/
+139,57,course,fast.ai Practical Deep Learning for Coders,Advanced,35,https://course.fast.ai/
+140,58,course,DeepLearning.AI Deep Learning Specialization,Advanced,36,https://www.coursera.org/specializations/deep-learning
+141,58,book,Pattern Recognition and Machine Learning by Bishop,Advanced,51,https://www.springer.com/gp/book/9780387310732
+142,59,course,fast.ai Practical Deep Learning for Coders,Advanced,35,https://course.fast.ai/
+143,59,video,Stanford CS231n Convolutional Neural Networks,Advanced,19,https://cs231n.stanford.edu/
+144,60,course,fast.ai Practical Deep Learning for Coders,Advanced,31,https://course.fast.ai/
+145,60,book,"Deep Learning by Goodfellow, Bengio & Courville",Advanced,52,https://www.deeplearningbook.org/
+146,61,book,Pattern Recognition and Machine Learning by Bishop,Advanced,77,https://www.springer.com/gp/book/9780387310732
+147,61,course,fast.ai Practical Deep Learning for Coders,Advanced,28,https://course.fast.ai/
+148,61,article,Papers With Code Trending Research,Advanced,4,https://paperswithcode.com/
+149,62,book,Pattern Recognition and Machine Learning by Bishop,Advanced,76,https://www.springer.com/gp/book/9780387310732
+150,62,video,Stanford CS231n Convolutional Neural Networks,Advanced,25,https://cs231n.stanford.edu/
+151,63,article,Papers With Code Trending Research,Intermediate,5,https://paperswithcode.com/
+152,63,course,DeepLearning.AI Deep Learning Specialization,Intermediate,41,https://www.coursera.org/specializations/deep-learning
+153,63,book,Pattern Recognition and Machine Learning by Bishop,Intermediate,67,https://www.springer.com/gp/book/9780387310732
+154,64,article,Papers With Code Trending Research,Intermediate,4,https://paperswithcode.com/
+155,64,book,"Deep Learning by Goodfellow, Bengio & Courville",Intermediate,59,https://www.deeplearningbook.org/
+156,65,video,3Blue1Brown Neural Networks Series,Advanced,4,https://www.youtube.com/watch?v=aircAruvnKk
+157,65,course,DeepLearning.AI Deep Learning Specialization,Advanced,32,https://www.coursera.org/specializations/deep-learning
+158,66,video,Fireship.io 100 Second Video Series,Beginner,5,https://www.youtube.com/@Fireship
+159,66,course,The Odin Project Full Stack Web Dev (Free),Beginner,54,https://www.theodinproject.com/
+160,67,article,MDN Web Docs JavaScript Reference,Beginner,5,https://developer.mozilla.org/
+161,67,book,Eloquent JavaScript by Marijn Haverbeke,Beginner,22,https://eloquentjavascript.net/
+162,68,article,MDN Web Docs JavaScript Reference,Beginner,4,https://developer.mozilla.org/
+163,68,book,You Don't Know JS Series by Kyle Simpson,Beginner,37,https://github.com/getify/You-Dont-Know-JS
+164,69,course,freeCodeCamp Responsive Web Design Certification,Intermediate,32,https://www.freecodecamp.org/learn/responsive-web-design/
+165,69,course,Frontend Masters Advanced JavaScript Courses,Intermediate,15,https://frontendmasters.com/
+166,70,course,The Odin Project Full Stack Web Dev (Free),Intermediate,76,https://www.theodinproject.com/
+167,70,course,Frontend Masters Advanced JavaScript Courses,Intermediate,18,https://frontendmasters.com/
+168,70,video,Fireship.io 100 Second Video Series,Intermediate,6,https://www.youtube.com/@Fireship
+169,71,article,MDN Web Docs JavaScript Reference,Intermediate,4,https://developer.mozilla.org/
+170,71,video,Traversy Media Web Development Tutorials,Intermediate,10,https://www.youtube.com/@TraversyMedia
+171,71,video,Fireship.io 100 Second Video Series,Intermediate,6,https://www.youtube.com/@Fireship
+172,72,book,You Don't Know JS Series by Kyle Simpson,Intermediate,36,https://github.com/getify/You-Dont-Know-JS
+173,72,course,freeCodeCamp Responsive Web Design Certification,Intermediate,29,https://www.freecodecamp.org/learn/responsive-web-design/
+174,73,book,You Don't Know JS Series by Kyle Simpson,Intermediate,21,https://github.com/getify/You-Dont-Know-JS
+175,73,article,MDN Web Docs JavaScript Reference,Intermediate,5,https://developer.mozilla.org/
+176,73,course,The Odin Project Full Stack Web Dev (Free),Intermediate,64,https://www.theodinproject.com/
+177,74,course,freeCodeCamp Responsive Web Design Certification,Intermediate,38,https://www.freecodecamp.org/learn/responsive-web-design/
+178,74,book,Eloquent JavaScript by Marijn Haverbeke,Intermediate,20,https://eloquentjavascript.net/
+179,74,article,MDN Web Docs JavaScript Reference,Intermediate,5,https://developer.mozilla.org/
+180,75,course,Frontend Masters Advanced JavaScript Courses,Intermediate,16,https://frontendmasters.com/
+181,75,book,Eloquent JavaScript by Marijn Haverbeke,Intermediate,26,https://eloquentjavascript.net/
+182,75,course,freeCodeCamp Responsive Web Design Certification,Intermediate,23,https://www.freecodecamp.org/learn/responsive-web-design/
+183,76,course,Frontend Masters Advanced JavaScript Courses,Intermediate,19,https://frontendmasters.com/
+184,76,article,MDN Web Docs JavaScript Reference,Intermediate,6,https://developer.mozilla.org/
+185,77,book,Eloquent JavaScript by Marijn Haverbeke,Advanced,25,https://eloquentjavascript.net/
+186,77,course,freeCodeCamp Responsive Web Design Certification,Advanced,36,https://www.freecodecamp.org/learn/responsive-web-design/
+187,78,article,MDN Web Docs JavaScript Reference,Advanced,5,https://developer.mozilla.org/
+188,78,book,Eloquent JavaScript by Marijn Haverbeke,Advanced,23,https://eloquentjavascript.net/
+189,78,course,Frontend Masters Advanced JavaScript Courses,Advanced,15,https://frontendmasters.com/
+190,79,video,Traversy Media Web Development Tutorials,Advanced,9,https://www.youtube.com/@TraversyMedia
+191,79,course,freeCodeCamp Responsive Web Design Certification,Advanced,31,https://www.freecodecamp.org/learn/responsive-web-design/
+192,79,book,You Don't Know JS Series by Kyle Simpson,Advanced,26,https://github.com/getify/You-Dont-Know-JS
+193,80,book,You Don't Know JS Series by Kyle Simpson,Advanced,33,https://github.com/getify/You-Dont-Know-JS
+194,80,course,Frontend Masters Advanced JavaScript Courses,Advanced,21,https://frontendmasters.com/
+195,81,video,Fireship.io 100 Second Video Series,Beginner,4,https://www.youtube.com/@Fireship
+196,81,book,Eloquent JavaScript by Marijn Haverbeke,Beginner,29,https://eloquentjavascript.net/
+197,82,course,Frontend Masters Advanced JavaScript Courses,Intermediate,17,https://frontendmasters.com/
+198,82,video,Fireship.io 100 Second Video Series,Intermediate,4,https://www.youtube.com/@Fireship
+199,83,course,Frontend Masters Advanced JavaScript Courses,Beginner,21,https://frontendmasters.com/
+200,83,book,You Don't Know JS Series by Kyle Simpson,Beginner,22,https://github.com/getify/You-Dont-Know-JS
+201,83,video,Fireship.io 100 Second Video Series,Beginner,4,https://www.youtube.com/@Fireship
+202,84,video,Fireship.io 100 Second Video Series,Intermediate,5,https://www.youtube.com/@Fireship
+203,84,article,MDN Web Docs JavaScript Reference,Intermediate,6,https://developer.mozilla.org/
+204,84,book,You Don't Know JS Series by Kyle Simpson,Intermediate,34,https://github.com/getify/You-Dont-Know-JS
+205,85,course,Frontend Masters Advanced JavaScript Courses,Intermediate,24,https://frontendmasters.com/
+206,85,video,Traversy Media Web Development Tutorials,Intermediate,8,https://www.youtube.com/@TraversyMedia
+207,85,article,MDN Web Docs JavaScript Reference,Intermediate,6,https://developer.mozilla.org/
+208,86,book,Cloud Native Patterns by Cornelia Davis,Beginner,19,https://www.manning.com/books/cloud-native-patterns
+209,86,course,Linux Foundation Kubernetes Fundamentals (LFS258),Beginner,43,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+210,87,course,Google Cloud Professional Architect Prep Course,Intermediate,29,https://cloud.google.com/certification/cloud-architect
+211,87,video,freeCodeCamp AWS Certified Cloud Practitioner,Intermediate,12,https://www.youtube.com/watch?v=3hLmDS179YE
+212,88,video,freeCodeCamp AWS Certified Cloud Practitioner,Intermediate,16,https://www.youtube.com/watch?v=3hLmDS179YE
+213,88,video,TechWorld with Nana Docker & Kubernetes Tutorials,Intermediate,6,https://www.youtube.com/@TechWorldwithNana
+214,88,course,Google Cloud Professional Architect Prep Course,Intermediate,20,https://cloud.google.com/certification/cloud-architect
+215,89,book,Terraform: Up and Running by Yevgeniy Brikman,Intermediate,20,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+216,89,course,Google Cloud Professional Architect Prep Course,Intermediate,32,https://cloud.google.com/certification/cloud-architect
+217,89,course,Linux Foundation Kubernetes Fundamentals (LFS258),Intermediate,27,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+218,90,article,AWS Well-Architected Framework Whitepapers,Intermediate,9,https://aws.amazon.com/architecture/well-architected/
+219,90,book,Terraform: Up and Running by Yevgeniy Brikman,Intermediate,19,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+220,91,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,17,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+221,91,course,Linux Foundation Kubernetes Fundamentals (LFS258),Advanced,31,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+222,91,video,freeCodeCamp AWS Certified Cloud Practitioner,Advanced,11,https://www.youtube.com/watch?v=3hLmDS179YE
+223,92,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,20,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+224,92,book,Cloud Native Patterns by Cornelia Davis,Advanced,31,https://www.manning.com/books/cloud-native-patterns
+225,93,video,freeCodeCamp AWS Certified Cloud Practitioner,Intermediate,17,https://www.youtube.com/watch?v=3hLmDS179YE
+226,93,course,AWS Certified Solutions Architect Exam Prep,Intermediate,35,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+227,93,course,Linux Foundation Kubernetes Fundamentals (LFS258),Intermediate,28,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+228,94,course,Google Cloud Professional Architect Prep Course,Intermediate,28,https://cloud.google.com/certification/cloud-architect
+229,94,video,TechWorld with Nana Docker & Kubernetes Tutorials,Intermediate,10,https://www.youtube.com/@TechWorldwithNana
+230,94,article,AWS Well-Architected Framework Whitepapers,Intermediate,6,https://aws.amazon.com/architecture/well-architected/
+231,95,video,freeCodeCamp AWS Certified Cloud Practitioner,Advanced,14,https://www.youtube.com/watch?v=3hLmDS179YE
+232,95,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,16,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+233,95,course,Google Cloud Professional Architect Prep Course,Advanced,20,https://cloud.google.com/certification/cloud-architect
+234,96,article,AWS Well-Architected Framework Whitepapers,Advanced,9,https://aws.amazon.com/architecture/well-architected/
+235,96,book,Cloud Native Patterns by Cornelia Davis,Advanced,18,https://www.manning.com/books/cloud-native-patterns
+236,96,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,20,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+237,97,video,freeCodeCamp AWS Certified Cloud Practitioner,Intermediate,11,https://www.youtube.com/watch?v=3hLmDS179YE
+238,97,book,Cloud Native Patterns by Cornelia Davis,Intermediate,18,https://www.manning.com/books/cloud-native-patterns
+239,98,article,AWS Well-Architected Framework Whitepapers,Intermediate,7,https://aws.amazon.com/architecture/well-architected/
+240,98,video,TechWorld with Nana Docker & Kubernetes Tutorials,Intermediate,9,https://www.youtube.com/@TechWorldwithNana
+241,99,course,AWS Certified Solutions Architect Exam Prep,Advanced,36,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+242,99,book,Cloud Native Patterns by Cornelia Davis,Advanced,18,https://www.manning.com/books/cloud-native-patterns
+243,99,article,AWS Well-Architected Framework Whitepapers,Advanced,6,https://aws.amazon.com/architecture/well-architected/
+244,100,video,freeCodeCamp AWS Certified Cloud Practitioner,Intermediate,13,https://www.youtube.com/watch?v=3hLmDS179YE
+245,100,course,Google Cloud Professional Architect Prep Course,Intermediate,32,https://cloud.google.com/certification/cloud-architect
+246,101,article,AWS Well-Architected Framework Whitepapers,Advanced,10,https://aws.amazon.com/architecture/well-architected/
+247,101,video,TechWorld with Nana Docker & Kubernetes Tutorials,Advanced,9,https://www.youtube.com/@TechWorldwithNana
+248,101,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,22,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+249,102,video,freeCodeCamp AWS Certified Cloud Practitioner,Advanced,15,https://www.youtube.com/watch?v=3hLmDS179YE
+250,102,book,Cloud Native Patterns by Cornelia Davis,Advanced,32,https://www.manning.com/books/cloud-native-patterns
+251,102,video,TechWorld with Nana Docker & Kubernetes Tutorials,Advanced,7,https://www.youtube.com/@TechWorldwithNana
+252,103,book,Terraform: Up and Running by Yevgeniy Brikman,Intermediate,24,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+253,103,course,AWS Certified Solutions Architect Exam Prep,Intermediate,23,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+254,104,course,AWS Certified Solutions Architect Exam Prep,Beginner,32,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+255,104,video,TechWorld with Nana Docker & Kubernetes Tutorials,Beginner,7,https://www.youtube.com/@TechWorldwithNana
+256,104,book,Cloud Native Patterns by Cornelia Davis,Beginner,26,https://www.manning.com/books/cloud-native-patterns
+257,105,book,Terraform: Up and Running by Yevgeniy Brikman,Advanced,15,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+258,105,course,Google Cloud Professional Architect Prep Course,Advanced,19,https://cloud.google.com/certification/cloud-architect
+259,106,book,The Web Application Hacker's Handbook,Beginner,33,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+260,106,video,IppSec HackTheBox Walkthrough Videos,Beginner,9,https://www.youtube.com/@ippsec
+261,107,video,NetworkChuck Cybersecurity YouTube Channel,Intermediate,7,https://www.youtube.com/@NetworkChuck
+262,107,book,Penetration Testing by Georgia Weidman,Intermediate,41,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+263,108,book,The Web Application Hacker's Handbook,Advanced,28,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+264,108,video,NetworkChuck Cybersecurity YouTube Channel,Advanced,5,https://www.youtube.com/@NetworkChuck
+265,109,book,Penetration Testing by Georgia Weidman,Advanced,35,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+266,109,article,OWASP Security Knowledge Base,Advanced,5,https://owasp.org/
+267,109,video,NetworkChuck Cybersecurity YouTube Channel,Advanced,6,https://www.youtube.com/@NetworkChuck
+268,110,course,TryHackMe Learning Paths (Practical Labs),Advanced,32,https://tryhackme.com/
+269,110,book,Penetration Testing by Georgia Weidman,Advanced,30,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+270,111,course,SANS Institute Security Courses,Intermediate,32,https://www.sans.org/
+271,111,video,NetworkChuck Cybersecurity YouTube Channel,Intermediate,7,https://www.youtube.com/@NetworkChuck
+272,112,video,NetworkChuck Cybersecurity YouTube Channel,Advanced,4,https://www.youtube.com/@NetworkChuck
+273,112,article,OWASP Security Knowledge Base,Advanced,6,https://owasp.org/
+274,113,video,IppSec HackTheBox Walkthrough Videos,Advanced,7,https://www.youtube.com/@ippsec
+275,113,book,Penetration Testing by Georgia Weidman,Advanced,27,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+276,113,article,OWASP Security Knowledge Base,Advanced,4,https://owasp.org/
+277,114,video,IppSec HackTheBox Walkthrough Videos,Advanced,6,https://www.youtube.com/@ippsec
+278,114,course,SANS Institute Security Courses,Advanced,33,https://www.sans.org/
+279,115,article,OWASP Security Knowledge Base,Intermediate,6,https://owasp.org/
+280,115,book,Penetration Testing by Georgia Weidman,Intermediate,32,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+281,115,course,SANS Institute Security Courses,Intermediate,30,https://www.sans.org/
+282,116,article,OWASP Security Knowledge Base,Intermediate,4,https://owasp.org/
+283,116,course,SANS Institute Security Courses,Intermediate,29,https://www.sans.org/
+284,117,video,NetworkChuck Cybersecurity YouTube Channel,Advanced,4,https://www.youtube.com/@NetworkChuck
+285,117,course,SANS Institute Security Courses,Advanced,41,https://www.sans.org/
+286,117,article,OWASP Security Knowledge Base,Advanced,6,https://owasp.org/
+287,118,course,TryHackMe Learning Paths (Practical Labs),Intermediate,45,https://tryhackme.com/
+288,118,book,The Web Application Hacker's Handbook,Intermediate,24,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+289,119,video,IppSec HackTheBox Walkthrough Videos,Intermediate,9,https://www.youtube.com/@ippsec
+290,119,book,Penetration Testing by Georgia Weidman,Intermediate,27,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+291,120,article,OWASP Security Knowledge Base,Intermediate,5,https://owasp.org/
+292,120,video,NetworkChuck Cybersecurity YouTube Channel,Intermediate,7,https://www.youtube.com/@NetworkChuck
+293,120,course,SANS Institute Security Courses,Intermediate,40,https://www.sans.org/
+294,121,video,NetworkChuck Cybersecurity YouTube Channel,Intermediate,8,https://www.youtube.com/@NetworkChuck
+295,121,video,IppSec HackTheBox Walkthrough Videos,Intermediate,7,https://www.youtube.com/@ippsec
+296,121,book,Penetration Testing by Georgia Weidman,Intermediate,34,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+297,122,course,Cybrary CISSP Certification Prep,Advanced,35,https://www.cybrary.it/
+298,122,article,OWASP Security Knowledge Base,Advanced,4,https://owasp.org/
+299,123,course,SANS Institute Security Courses,Advanced,29,https://www.sans.org/
+300,123,book,The Web Application Hacker's Handbook,Advanced,21,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+301,123,video,NetworkChuck Cybersecurity YouTube Channel,Advanced,7,https://www.youtube.com/@NetworkChuck
+302,124,course,Cybrary CISSP Certification Prep,Advanced,27,https://www.cybrary.it/
+303,124,course,SANS Institute Security Courses,Advanced,51,https://www.sans.org/
+304,125,course,TryHackMe Learning Paths (Practical Labs),Intermediate,39,https://tryhackme.com/
+305,125,book,The Web Application Hacker's Handbook,Intermediate,26,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+306,126,book,Calculus by James Stewart,Intermediate,53,https://www.cengage.com/c/calculus-8e-stewart/
+307,126,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Intermediate,33,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+308,127,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Intermediate,40,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+309,127,book,Introduction to Probability by Blitzstein & Hwang,Intermediate,43,https://www.probabilitybook.net/
+310,128,video,3Blue1Brown Essence of Calculus,Intermediate,3,https://www.youtube.com/watch?v=WUvTyaaNkzM
+311,128,book,Linear Algebra Done Right by Sheldon Axler,Intermediate,30,https://link.springer.com/book/9783319110790
+312,129,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Intermediate,38,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+313,129,book,Introduction to Probability by Blitzstein & Hwang,Intermediate,43,https://www.probabilitybook.net/
+314,129,book,Calculus by James Stewart,Intermediate,49,https://www.cengage.com/c/calculus-8e-stewart/
+315,130,book,Introduction to Probability by Blitzstein & Hwang,Intermediate,31,https://www.probabilitybook.net/
+316,130,book,Linear Algebra Done Right by Sheldon Axler,Intermediate,41,https://link.springer.com/book/9783319110790
+317,131,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Advanced,39,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+318,131,book,Linear Algebra Done Right by Sheldon Axler,Advanced,51,https://link.springer.com/book/9783319110790
+319,132,book,Calculus by James Stewart,Advanced,39,https://www.cengage.com/c/calculus-8e-stewart/
+320,132,video,Khan Academy Full Mathematics Curriculum,Advanced,16,https://www.khanacademy.org/math
+321,133,book,Introduction to Probability by Blitzstein & Hwang,Advanced,26,https://www.probabilitybook.net/
+322,133,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Advanced,41,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+323,134,video,Khan Academy Full Mathematics Curriculum,Advanced,16,https://www.khanacademy.org/math
+324,134,video,3Blue1Brown Essence of Calculus,Advanced,3,https://www.youtube.com/watch?v=WUvTyaaNkzM
+325,135,book,Calculus by James Stewart,Advanced,39,https://www.cengage.com/c/calculus-8e-stewart/
+326,135,book,Linear Algebra Done Right by Sheldon Axler,Advanced,44,https://link.springer.com/book/9783319110790
+327,136,book,Introduction to Probability by Blitzstein & Hwang,Advanced,32,https://www.probabilitybook.net/
+328,136,book,Calculus by James Stewart,Advanced,41,https://www.cengage.com/c/calculus-8e-stewart/
+329,137,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Advanced,42,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+330,137,video,Khan Academy Full Mathematics Curriculum,Advanced,21,https://www.khanacademy.org/math
+331,137,video,3Blue1Brown Essence of Calculus,Advanced,4,https://www.youtube.com/watch?v=WUvTyaaNkzM
+332,138,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Advanced,42,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+333,138,book,Introduction to Probability by Blitzstein & Hwang,Advanced,26,https://www.probabilitybook.net/
+334,138,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Advanced,50,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+335,139,book,Linear Algebra Done Right by Sheldon Axler,Intermediate,47,https://link.springer.com/book/9783319110790
+336,139,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Intermediate,34,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+337,139,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Intermediate,46,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+338,140,video,Khan Academy Full Mathematics Curriculum,Advanced,26,https://www.khanacademy.org/math
+339,140,video,3Blue1Brown Essence of Calculus,Advanced,3,https://www.youtube.com/watch?v=WUvTyaaNkzM
+340,140,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Advanced,50,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+341,141,course,MIT OpenCourseWare 18.06 Linear Algebra (Gilbert Strang),Intermediate,29,https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/
+342,141,book,Linear Algebra Done Right by Sheldon Axler,Intermediate,35,https://link.springer.com/book/9783319110790
+343,141,video,Khan Academy Full Mathematics Curriculum,Intermediate,25,https://www.khanacademy.org/math
+344,142,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Intermediate,28,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+345,142,book,Introduction to Probability by Blitzstein & Hwang,Intermediate,38,https://www.probabilitybook.net/
+346,142,book,Linear Algebra Done Right by Sheldon Axler,Intermediate,37,https://link.springer.com/book/9783319110790
+347,143,course,MIT OpenCourseWare 18.01 Single Variable Calculus,Advanced,49,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+348,143,book,Calculus by James Stewart,Advanced,37,https://www.cengage.com/c/calculus-8e-stewart/
+349,144,book,Linear Algebra Done Right by Sheldon Axler,Advanced,50,https://link.springer.com/book/9783319110790
+350,144,video,Khan Academy Full Mathematics Curriculum,Advanced,20,https://www.khanacademy.org/math
+351,144,video,3Blue1Brown Essence of Linear Algebra,Advanced,2,https://www.youtube.com/watch?v=fNk_zzaMoSs
+352,145,video,3Blue1Brown Essence of Calculus,Intermediate,3,https://www.youtube.com/watch?v=WUvTyaaNkzM
+353,145,video,3Blue1Brown Essence of Linear Algebra,Intermediate,3,https://www.youtube.com/watch?v=fNk_zzaMoSs
+354,145,video,Khan Academy Full Mathematics Curriculum,Intermediate,26,https://www.khanacademy.org/math
+355,145,video,3Blue1Brown Essence of Calculus,Intermediate,2,https://www.youtube.com/watch?v=WUvTyaaNkzM
+356,145,video,3Blue1Brown Essence of Linear Algebra,Intermediate,3,https://www.youtube.com/watch?v=fNk_zzaMoSs
+357,146,course,Coursera Algorithms Specialization (Stanford),Intermediate,38,https://www.coursera.org/specializations/algorithms
+358,146,article,GeeksforGeeks Programming Tutorials,Intermediate,5,https://www.geeksforgeeks.org/
+359,147,course,MIT OpenCourseWare 6.001 Structure and Interpretation,Intermediate,32,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+360,147,article,GeeksforGeeks Programming Tutorials,Intermediate,6,https://www.geeksforgeeks.org/
+361,148,video,CS50x Introduction to Computer Science (Harvard),Advanced,27,https://cs50.harvard.edu/x/
+362,148,book,The Pragmatic Programmer by Hunt & Thomas,Advanced,28,https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/
+363,149,video,CS50x Introduction to Computer Science (Harvard),Intermediate,28,https://cs50.harvard.edu/x/
+364,149,book,Introduction to Algorithms (CLRS),Intermediate,50,https://www.amazon.com/Introduction-Algorithms-CLRS/dp/0262046305
+365,150,video,CS50x Introduction to Computer Science (Harvard),Intermediate,31,https://cs50.harvard.edu/x/
+366,150,video,freeCodeCamp Full Programming Bootcamp,Intermediate,11,https://www.youtube.com/watch?v=zOjov-2OZ0E
+367,151,course,Coursera Data Science Specialization (Johns Hopkins),Advanced,36,https://www.coursera.org/specializations/jhu-data-science
+368,151,book,The Elements of Statistical Learning,Advanced,57,https://hastie.su.domains/ElemStatLearn/
+369,152,video,Data School YouTube Channel,Advanced,9,https://www.youtube.com/@dataschool
+370,152,book,Hands-On Machine Learning by Aurélien Géron,Advanced,42,https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
+371,153,course,Kaggle Learn Free Data Science Courses,Intermediate,23,https://www.kaggle.com/learn
+372,153,course,Coursera Data Science Specialization (Johns Hopkins),Intermediate,32,https://www.coursera.org/specializations/jhu-data-science
+373,154,book,Pattern Recognition and Machine Learning by Bishop,Advanced,62,https://www.springer.com/gp/book/9780387310732
+374,154,article,Papers With Code Trending Research,Advanced,4,https://paperswithcode.com/
+375,155,video,3Blue1Brown Neural Networks Series,Advanced,3,https://www.youtube.com/watch?v=aircAruvnKk
+376,155,book,"Deep Learning by Goodfellow, Bengio & Courville",Advanced,50,https://www.deeplearningbook.org/
+377,156,book,You Don't Know JS Series by Kyle Simpson,Advanced,36,https://github.com/getify/You-Dont-Know-JS
+378,156,video,Traversy Media Web Development Tutorials,Advanced,8,https://www.youtube.com/@TraversyMedia
+379,157,course,The Odin Project Full Stack Web Dev (Free),Advanced,70,https://www.theodinproject.com/
+380,157,course,freeCodeCamp Responsive Web Design Certification,Advanced,26,https://www.freecodecamp.org/learn/responsive-web-design/
+381,158,course,Linux Foundation Kubernetes Fundamentals (LFS258),Advanced,29,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+382,158,course,Google Cloud Professional Architect Prep Course,Advanced,32,https://cloud.google.com/certification/cloud-architect
+383,159,article,AWS Well-Architected Framework Whitepapers,Intermediate,7,https://aws.amazon.com/architecture/well-architected/
+384,159,book,Terraform: Up and Running by Yevgeniy Brikman,Intermediate,17,https://www.oreilly.com/library/view/terraform-up/9781492046899/
+385,160,book,The Web Application Hacker's Handbook,Advanced,34,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+386,160,book,Penetration Testing by Georgia Weidman,Advanced,31,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+387,161,book,The Web Application Hacker's Handbook,Advanced,23,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+388,161,book,Penetration Testing by Georgia Weidman,Advanced,43,https://www.amazon.com/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641
+389,162,book,Calculus by James Stewart,Advanced,46,https://www.cengage.com/c/calculus-8e-stewart/
+390,162,video,3Blue1Brown Essence of Calculus,Advanced,2,https://www.youtube.com/watch?v=WUvTyaaNkzM
+391,163,book,Linear Algebra Done Right by Sheldon Axler,Advanced,35,https://link.springer.com/book/9783319110790
+392,163,video,3Blue1Brown Essence of Linear Algebra,Advanced,3,https://www.youtube.com/watch?v=fNk_zzaMoSs
+393,164,video,Khan Academy Full Mathematics Curriculum,Advanced,19,https://www.khanacademy.org/math
+394,164,video,3Blue1Brown Essence of Linear Algebra,Advanced,2,https://www.youtube.com/watch?v=fNk_zzaMoSs
+395,165,video,StatQuest with Josh Starmer,Advanced,18,https://www.youtube.com/@statquest
+396,165,book,Hands-On Machine Learning by Aurélien Géron,Advanced,40,https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
+397,140,video,Khan Academy Full Mathematics Curriculum (Supplemental),Advanced,17,https://www.khanacademy.org/math
+398,35,video,StatQuest with Josh Starmer (Supplemental),Advanced,19,https://www.youtube.com/@statquest
+399,101,video,freeCodeCamp AWS Certified Cloud Practitioner (Supplemental),Advanced,10,https://www.youtube.com/watch?v=3hLmDS179YE
+400,106,article,OWASP Security Knowledge Base (Supplemental),Beginner,5,https://owasp.org/
+401,83,article,MDN Web Docs JavaScript Reference (Supplemental),Beginner,4,https://developer.mozilla.org/
+402,116,article,OWASP Security Knowledge Base (Supplemental),Intermediate,5,https://owasp.org/
+403,7,book,Clean Code by Robert C. Martin (Supplemental),Advanced,25,https://www.oreilly.com/library/view/clean-code/9780136083238/
+404,46,course,DeepLearning.AI Deep Learning Specialization (Supplemental),Intermediate,33,https://www.coursera.org/specializations/deep-learning
+405,117,video,NetworkChuck Cybersecurity YouTube Channel (Supplemental),Advanced,4,https://www.youtube.com/@NetworkChuck
+406,52,book,Pattern Recognition and Machine Learning by Bishop (Supplemental),Advanced,54,https://www.springer.com/gp/book/9780387310732
+407,137,video,3Blue1Brown Essence of Linear Algebra (Supplemental),Advanced,3,https://www.youtube.com/watch?v=fNk_zzaMoSs
+408,24,article,GeeksforGeeks Programming Tutorials (Supplemental),Advanced,5,https://www.geeksforgeeks.org/
+409,65,video,Stanford CS231n Convolutional Neural Networks (Supplemental),Advanced,26,https://cs231n.stanford.edu/
+410,141,course,MIT OpenCourseWare 18.01 Single Variable Calculus (Supplemental),Intermediate,50,https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/
+411,42,course,Kaggle Learn Free Data Science Courses (Supplemental),Advanced,18,https://www.kaggle.com/learn
+412,32,course,Coursera Data Science Specialization (Johns Hopkins) (Supplemental),Advanced,46,https://www.coursera.org/specializations/jhu-data-science
+413,134,video,3Blue1Brown Essence of Linear Algebra (Supplemental),Advanced,3,https://www.youtube.com/watch?v=fNk_zzaMoSs
+414,30,course,Kaggle Learn Free Data Science Courses (Supplemental),Intermediate,18,https://www.kaggle.com/learn
+415,91,course,Linux Foundation Kubernetes Fundamentals (LFS258) (Supplemental),Advanced,39,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+416,58,course,fast.ai Practical Deep Learning for Coders (Supplemental),Advanced,31,https://course.fast.ai/
+417,82,video,Traversy Media Web Development Tutorials (Supplemental),Intermediate,10,https://www.youtube.com/@TraversyMedia
+418,47,book,Pattern Recognition and Machine Learning by Bishop (Supplemental),Beginner,57,https://www.springer.com/gp/book/9780387310732
+419,11,article,GeeksforGeeks Programming Tutorials (Supplemental),Intermediate,5,https://www.geeksforgeeks.org/
+420,68,book,You Don't Know JS Series by Kyle Simpson (Supplemental),Beginner,38,https://github.com/getify/You-Dont-Know-JS
+421,127,video,Khan Academy Full Mathematics Curriculum (Supplemental),Intermediate,20,https://www.khanacademy.org/math
+422,50,article,Papers With Code Trending Research (Supplemental),Intermediate,6,https://paperswithcode.com/
+423,94,course,Linux Foundation Kubernetes Fundamentals (LFS258) (Supplemental),Intermediate,39,https://training.linuxfoundation.org/training/kubernetes-fundamentals/
+424,102,course,AWS Certified Solutions Architect Exam Prep (Supplemental),Advanced,23,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+425,66,video,Traversy Media Web Development Tutorials (Supplemental),Beginner,11,https://www.youtube.com/@TraversyMedia
+426,79,course,Frontend Masters Advanced JavaScript Courses (Supplemental),Advanced,19,https://frontendmasters.com/
+427,21,course,MIT OpenCourseWare 6.001 Structure and Interpretation (Supplemental),Advanced,28,https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/
+428,49,book,Pattern Recognition and Machine Learning by Bishop (Supplemental),Intermediate,51,https://www.springer.com/gp/book/9780387310732
+429,71,video,Fireship.io 100 Second Video Series (Supplemental),Intermediate,5,https://www.youtube.com/@Fireship
+430,114,book,The Web Application Hacker's Handbook (Supplemental),Advanced,23,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+431,6,course,Coursera Algorithms Specialization (Stanford) (Supplemental),Advanced,34,https://www.coursera.org/specializations/algorithms
+432,99,course,AWS Certified Solutions Architect Exam Prep (Supplemental),Advanced,36,https://aws.amazon.com/certification/certified-solutions-architect-associate/
+433,22,video,freeCodeCamp Full Programming Bootcamp (Supplemental),Intermediate,15,https://www.youtube.com/watch?v=zOjov-2OZ0E
+434,43,book,The Elements of Statistical Learning (Supplemental),Intermediate,59,https://hastie.su.domains/ElemStatLearn/
+435,73,article,MDN Web Docs JavaScript Reference (Supplemental),Intermediate,4,https://developer.mozilla.org/
+436,85,book,You Don't Know JS Series by Kyle Simpson (Supplemental),Intermediate,29,https://github.com/getify/You-Dont-Know-JS
+437,20,book,Clean Code by Robert C. Martin (Supplemental),Advanced,36,https://www.oreilly.com/library/view/clean-code/9780136083238/
+438,115,video,NetworkChuck Cybersecurity YouTube Channel (Supplemental),Intermediate,6,https://www.youtube.com/@NetworkChuck
+439,19,video,freeCodeCamp Full Programming Bootcamp (Supplemental),Advanced,14,https://www.youtube.com/watch?v=zOjov-2OZ0E
+440,23,video,freeCodeCamp Full Programming Bootcamp (Supplemental),Intermediate,9,https://www.youtube.com/watch?v=zOjov-2OZ0E
+441,110,book,The Web Application Hacker's Handbook (Supplemental),Advanced,27,https://www.amazon.com/Web-Application-Hackers-Handbook/dp/1118026470
+442,92,book,Cloud Native Patterns by Cornelia Davis (Supplemental),Advanced,26,https://www.manning.com/books/cloud-native-patterns
+443,139,video,3Blue1Brown Essence of Linear Algebra (Supplemental),Intermediate,4,https://www.youtube.com/watch?v=fNk_zzaMoSs
+444,54,video,3Blue1Brown Neural Networks Series (Supplemental),Advanced,3,https://www.youtube.com/watch?v=aircAruvnKk
+445,40,course,Coursera Data Science Specialization (Johns Hopkins) (Supplemental),Advanced,40,https://www.coursera.org/specializations/jhu-data-science
+446,97,article,AWS Well-Architected Framework Whitepapers (Supplemental),Intermediate,10,https://aws.amazon.com/architecture/well-architected/

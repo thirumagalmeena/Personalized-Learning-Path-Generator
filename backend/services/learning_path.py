@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 from backend import models
+from backend.services.embedding_service import compute_similarity
 
 
 # -----------------------------
@@ -40,23 +41,45 @@ def get_goal_skills(goal_name, db):
 
 
 # -----------------------------
-# STEP 2: Compute Skill Gap
+# STEP 2: Check if skill is covered (with VAE similarity)
 # -----------------------------
-def compute_skill_gap(user_skills, goal_skills):
-    """Find skills in goal that user doesn't already have"""
-    user_set = set([s.lower() for s in user_skills])
-    
-    # Find skills in goal that user doesn't have
+def is_skill_covered(user_skills, target_skill, threshold=0.7):
+    """
+    Check if a target skill is covered by user's existing skills
+    through direct match or VAE-based similarity
+    """
+    target_skill = target_skill.lower()
+
+    for user_skill in user_skills:
+        # direct match
+        if user_skill.lower() == target_skill:
+            return True
+
+        # VAE similarity
+        sim = compute_similarity(user_skill, target_skill)
+
+        if sim >= threshold:
+            return True
+
+    return False
+
+
+# -----------------------------
+# STEP 3: Compute Skill Gap (with VAE similarity)
+# -----------------------------
+def compute_skill_gap(user_skills, goal_skills, threshold=0.7):
+    """Find skills in goal that user doesn't already have (considering similarities)"""
     gap = []
+
     for skill in goal_skills:
-        if skill.lower() not in user_set:
+        if not is_skill_covered(user_skills, skill, threshold):
             gap.append(skill)
-    
+
     return gap
 
 
 # -----------------------------
-# STEP 3: Expand Prerequisites
+# STEP 4: Expand Prerequisites
 # -----------------------------
 def expand_with_prerequisites(skill_list, db, user_skills=None):
     """
@@ -107,7 +130,7 @@ def expand_with_prerequisites(skill_list, db, user_skills=None):
 
 
 # -----------------------------
-# STEP 4: Build Skill Graph
+# STEP 5: Build Skill Graph
 # -----------------------------
 def build_skill_graph(skill_names, db):
     """Build dependency graph and calculate in-degrees for topological sorting"""
@@ -144,7 +167,7 @@ def build_skill_graph(skill_names, db):
 
 
 # -----------------------------
-# STEP 5: Topological Sort
+# STEP 6: Topological Sort
 # -----------------------------
 def topological_sort(skills, graph, in_degree):
     """Sort skills so prerequisites come before dependent skills"""
@@ -178,7 +201,7 @@ def topological_sort(skills, graph, in_degree):
 
 
 # -----------------------------
-# STEP 6: Attach Resources
+# STEP 7: Attach Resources
 # -----------------------------
 def attach_resources(ordered_skills, db):
     """
@@ -231,7 +254,7 @@ def attach_resources(ordered_skills, db):
 # -----------------------------
 # MAIN PIPELINE FUNCTION
 # -----------------------------
-def generate_learning_path(user_skills, goal_name, db):
+def generate_learning_path(user_skills, goal_name, db, similarity_threshold=0.7):
     """
     Main function to generate a personalized learning path with resources.
     
@@ -239,6 +262,7 @@ def generate_learning_path(user_skills, goal_name, db):
         user_skills: List of skill names the user already knows
         goal_name: Name of the target learning goal
         db: Database session
+        similarity_threshold: Minimum similarity score to consider a skill covered (default: 0.7)
     
     Returns:
         List of steps with skill and resource details
@@ -246,8 +270,8 @@ def generate_learning_path(user_skills, goal_name, db):
     # Step 1: Get goal skills
     goal_skills = get_goal_skills(goal_name, db)
     
-    # Step 2: Compute gap
-    gap = compute_skill_gap(user_skills, goal_skills)
+    # Step 2: Compute gap with VAE similarity matching (db parameter removed)
+    gap = compute_skill_gap(user_skills, goal_skills, similarity_threshold)
     
     # If no gap, return empty list
     if not gap:
@@ -262,7 +286,7 @@ def generate_learning_path(user_skills, goal_name, db):
     # Step 5: Topologically sort
     ordered_skills = topological_sort(expanded, graph, in_degree)
     
-    # Step 6: Filter out skills user already knows
+    # Step 6: Filter out skills user already knows (final safety check)
     skills_to_learn = [s for s in ordered_skills if s not in user_skills]
     
     # Step 7: Attach resources to each skill
