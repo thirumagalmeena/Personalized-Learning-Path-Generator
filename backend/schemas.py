@@ -152,19 +152,22 @@ class SkillSimilarityOut(SkillSimilarityBase):
 
 class LearningPathRequest(BaseModel):
     """Request from frontend to generate a learning path"""
-    current_skills: List[str]  # User's existing skill names
-    goal: str                   # Goal name (matches your models.py where goal_name is used)
-    learning_pace: str
-    preferences: List[str]
+    current_skills: List[str]
+    goal: str
+    pace: Optional[str] = None          # slow | medium | fast (optional)
+    preferences: Optional[List[str]] = None  # article | course | video | book
 
 
 class LearningStep(BaseModel):
     """A single step in the learning path"""
     step_number: int
-    skill_name: str              # Matches skill_name in Skill model
-    resource_title: str          # Matches resource_title in LearningResource
-    resource_type: str           # Matches resource_type in LearningResource
-    url: str                     # Matches url in LearningResource
+    skill: str
+    difficulty: Optional[str] = None
+    estimated_learning_hours: Optional[int] = None
+    resource_title: Optional[str] = None
+    resource_type: Optional[str] = None
+    estimated_time: Optional[int] = None
+    url: Optional[str] = None
 
 
 class LearningPathResponse(BaseModel):
