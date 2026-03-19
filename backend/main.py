@@ -1,9 +1,9 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, HTTPException, status, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import func
-from typing import List
+from typing import List, Optional
 
 from backend import models
 from backend import schemas
@@ -110,6 +110,33 @@ def get_skills(db: Session = Depends(get_db)):
 def get_goals(db: Session = Depends(get_db)):
     goals = db.query(models.LearningGoal).all()
     return goals
+
+
+# get distinct categories from skills table
+@app.get("/categories", response_model=List[str], tags=["Skills"])
+def get_categories(db: Session = Depends(get_db)):
+    rows = (
+        db.query(models.Skill.category)
+        .distinct()
+        .order_by(models.Skill.category)
+        .all()
+    )
+    return [r[0] for r in rows if r[0]]
+
+
+# get skills filtered by category and/or difficulty
+@app.get("/skills/filter", response_model=List[schemas.SkillDropdown], tags=["Skills"])
+def filter_skills(
+    category: Optional[str] = Query(None),
+    difficulty: Optional[str] = Query(None),
+    db: Session = Depends(get_db),
+):
+    query = db.query(models.Skill)
+    if category:
+        query = query.filter(models.Skill.category == category)
+    if difficulty:
+        query = query.filter(models.Skill.difficulty == difficulty)
+    return query.order_by(models.Skill.skill_name).all()
 
 # generate learning path endpoints
 """
