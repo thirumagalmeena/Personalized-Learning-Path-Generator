@@ -1,166 +1,174 @@
-skill_id,skill_name,category,difficulty,estimated_learning_hours,description
-1,Python Basics,Programming,Beginner,20,"Fundamental Python syntax, variables, data types, and basic operations"
-2,Data Structures,Programming,Intermediate,30,"Arrays, linked lists, stacks, queues, trees, and graphs"
-3,Algorithms,Programming,Advanced,40,"Sorting, searching, dynamic programming, and algorithm analysis"
-4,Object-Oriented Programming,Programming,Intermediate,25,"Classes, inheritance, polymorphism, and encapsulation"
-5,Functional Programming,Programming,Intermediate,20,"Pure functions, immutability, higher-order functions, and monads"
-6,Concurrency & Multithreading,Programming,Advanced,30,"Threads, async/await, locks, race conditions, and parallel execution"
-7,Design Patterns,Programming,Advanced,35,"GoF patterns: creational, structural, behavioral"
-8,Testing & TDD,Programming,Intermediate,20,"Unit tests, mocking, test-driven development, and CI integration"
-9,Version Control (Git),Programming,Beginner,10,"Branching, merging, rebasing, and collaborative workflows"
-10,Command Line & Shell Scripting,Programming,Beginner,15,"Bash scripting, file operations, piping, and environment management"
-11,Regular Expressions,Programming,Intermediate,10,"Pattern matching, groups, lookaheads, and substitution"
-12,Debugging Techniques,Programming,Intermediate,15,"Breakpoints, profiling, logging, and error tracing"
-13,Code Review Best Practices,Programming,Intermediate,10,"Readable code, constructive feedback, and review workflows"
-14,API Design,Programming,Advanced,25,"REST, GraphQL, versioning, and documentation"
-15,Database Programming,Programming,Intermediate,25,"SQL queries, ORM, transactions, and indexing"
-16,Memory Management,Programming,Advanced,30,"Pointers, garbage collection, heap vs stack, and memory leaks"
-17,Compiler Design,Programming,Advanced,50,"Lexing, parsing, AST, semantic analysis, and code generation"
-18,Networking Fundamentals for Developers,Programming,Intermediate,20,"Sockets, HTTP, TCP/IP stack, and network debugging"
-19,Software Architecture,Programming,Advanced,40,"Monolith vs microservices, layered architecture, and SOLID"
-20,Performance Optimization,Programming,Advanced,30,"Profiling, caching, algorithmic complexity, and benchmarking"
-21,Rust Programming,Programming,Advanced,40,"Ownership, borrowing, lifetimes, and safe concurrency"
-22,Go Programming,Programming,Intermediate,25,"Goroutines, channels, interfaces, and the Go toolchain"
-23,Java Programming,Programming,Intermediate,30,"JVM, generics, streams, and enterprise patterns"
-24,C++ Programming,Programming,Advanced,40,"Pointers, templates, STL, and systems programming"
-25,TypeScript,Programming,Intermediate,20,"Type system, interfaces, generics, and tooling"
-26,Data Wrangling with Pandas,Data Science,Intermediate,25,"DataFrames, groupby, merging, and cleaning messy datasets"
-27,Exploratory Data Analysis,Data Science,Intermediate,20,"Statistical summaries, distributions, outliers, and visualization"
-28,Feature Engineering,Data Science,Advanced,30,"Encoding, scaling, interaction features, and feature selection"
-29,Statistical Inference,Data Science,Intermediate,35,"Hypothesis testing, confidence intervals, and p-values"
-30,Probability Theory,Data Science,Intermediate,30,"Random variables, distributions, Bayes theorem, and expectation"
-31,Data Visualization,Data Science,Beginner,15,"Matplotlib, Seaborn, Plotly, and storytelling with data"
-32,Time Series Analysis,Data Science,Advanced,35,"ARIMA, seasonal decomposition, and forecasting"
-33,A/B Testing,Data Science,Intermediate,20,"Experimental design, sample size, and statistical significance"
-34,SQL for Data Science,Data Science,Beginner,20,"Aggregations, window functions, subqueries, and optimization"
-35,Data Pipeline Design,Data Science,Advanced,30,"ETL, batch vs streaming, orchestration, and data quality"
-36,NoSQL Databases,Data Science,Intermediate,20,"Document stores, key-value, column-family, and graph databases"
-37,Web Scraping,Data Science,Intermediate,15,"BeautifulSoup, Scrapy, handling JS-rendered pages, and rate limiting"
-38,Data Ethics & Privacy,Data Science,Beginner,10,"Bias, fairness, GDPR, anonymization, and responsible data use"
-39,Bayesian Statistics,Data Science,Advanced,40,"Prior/posterior, MCMC, hierarchical models, and PyMC"
-40,Dimensionality Reduction,Data Science,Advanced,25,"PCA, t-SNE, UMAP, and manifold learning"
-41,Recommender Systems,Data Science,Advanced,35,"Collaborative filtering, content-based, and matrix factorization"
-42,Graph Analytics,Data Science,Advanced,30,"Network centrality, community detection, and graph databases"
-43,Geospatial Analysis,Data Science,Intermediate,25,"GeoDataFrames, spatial joins, choropleth maps, and PostGIS"
-44,Business Intelligence,Data Science,Beginner,20,"KPIs, dashboards, Tableau, and Power BI basics"
-45,Data Storytelling,Data Science,Intermediate,15,"Narrative structure, audience targeting, and slide design"
-46,Machine Learning Fundamentals,Artificial Intelligence,Intermediate,40,"Supervised, unsupervised, and reinforcement learning overview"
-47,Linear & Logistic Regression,Artificial Intelligence,Beginner,20,"Regression analysis, loss functions, and gradient descent"
-48,Decision Trees & Random Forests,Artificial Intelligence,Intermediate,25,"Splitting criteria, bagging, boosting, and feature importance"
-49,Support Vector Machines,Artificial Intelligence,Intermediate,25,"Kernels, margin maximization, and SVM classification"
-50,Neural Networks Basics,Artificial Intelligence,Intermediate,30,"Perceptrons, backpropagation, activation functions, and layers"
-51,Deep Learning,Artificial Intelligence,Advanced,50,"CNNs, RNNs, LSTMs, and training large networks"
-52,Natural Language Processing,Artificial Intelligence,Advanced,45,"Tokenization, embeddings, transformers, and text classification"
-53,Computer Vision,Artificial Intelligence,Advanced,45,"Image classification, object detection, segmentation, and GANs"
-54,Reinforcement Learning,Artificial Intelligence,Advanced,50,"MDPs, Q-learning, policy gradients, and actor-critic methods"
-55,Model Evaluation & Metrics,Artificial Intelligence,Intermediate,20,"Accuracy, precision, recall, ROC, and cross-validation"
-56,Hyperparameter Tuning,Artificial Intelligence,Intermediate,20,"Grid search, random search, Bayesian optimization, and Optuna"
-57,Transfer Learning,Artificial Intelligence,Advanced,30,"Fine-tuning pretrained models, domain adaptation, and few-shot"
-58,Generative AI & LLMs,Artificial Intelligence,Advanced,40,"Prompt engineering, RAG, fine-tuning, and LLM evaluation"
-59,MLOps,Artificial Intelligence,Advanced,35,"Model versioning, deployment, monitoring, and CI/CD for ML"
-60,Explainable AI,Artificial Intelligence,Advanced,30,"SHAP, LIME, feature attribution, and model transparency"
-61,Graph Neural Networks,Artificial Intelligence,Advanced,40,"Message passing, GCN, GAT, and molecular property prediction"
-62,Federated Learning,Artificial Intelligence,Advanced,35,"Privacy-preserving ML, differential privacy, and aggregation"
-63,AI Ethics & Fairness,Artificial Intelligence,Intermediate,20,"Bias auditing, fairness metrics, and responsible AI frameworks"
-64,AutoML,Artificial Intelligence,Intermediate,20,"Neural architecture search, automated feature engineering, and H2O"
-65,Causal Inference,Artificial Intelligence,Advanced,40,"Do-calculus, counterfactuals, instrumental variables, and DAGs"
-66,HTML & CSS Fundamentals,Web Development,Beginner,15,"Semantic markup, box model, selectors, and basic layouts"
-67,Responsive Web Design,Web Development,Beginner,15,"Media queries, flexbox, CSS grid, and mobile-first approach"
-68,JavaScript Fundamentals,Web Development,Beginner,25,"DOM manipulation, events, closures, and ES6+ features"
-69,React.js,Web Development,Intermediate,30,"Components, hooks, state management, and the virtual DOM"
-70,Vue.js,Web Development,Intermediate,25,"Options API, composition API, reactivity, and Vue Router"
-71,Node.js & Express,Web Development,Intermediate,25,"Server-side JS, middleware, routing, and REST APIs"
-72,Next.js,Web Development,Intermediate,25,"SSR, SSG, ISR, API routes, and deployment on Vercel"
-73,GraphQL,Web Development,Intermediate,20,"Schemas, resolvers, queries, mutations, and Apollo Client"
-74,RESTful API Development,Web Development,Intermediate,20,"HTTP methods, status codes, authentication, and OpenAPI"
-75,Web Accessibility (a11y),Web Development,Intermediate,15,"WCAG guidelines, ARIA roles, screen readers, and audits"
-76,Progressive Web Apps,Web Development,Intermediate,20,"Service workers, offline support, push notifications, and manifests"
-77,WebSockets & Real-time Apps,Web Development,Advanced,25,"Socket.io, pub/sub, chat apps, and live dashboards"
-78,Authentication & Authorization,Web Development,Advanced,25,"JWT, OAuth 2.0, OpenID Connect, and session management"
-79,Web Security,Web Development,Advanced,25,"XSS, CSRF, SQL injection, HTTPS, and CSP headers"
-80,Frontend Performance,Web Development,Advanced,20,"Code splitting, lazy loading, caching, and Core Web Vitals"
-81,CSS Frameworks (Tailwind),Web Development,Beginner,10,"Utility-first CSS, custom themes, and component design"
-82,Testing Frontend Apps,Web Development,Intermediate,20,"Jest, React Testing Library, Cypress, and visual regression"
-83,Browser DevTools,Web Development,Beginner,10,"Debugging, network analysis, performance profiling, and storage"
-84,Web Components,Web Development,Intermediate,20,"Custom elements, shadow DOM, templates, and slots"
-85,Svelte,Web Development,Intermediate,20,"Reactive declarations, stores, transitions, and SvelteKit"
-86,Cloud Fundamentals,Cloud Computing,Beginner,15,"IaaS, PaaS, SaaS, shared responsibility model, and major providers"
-87,AWS Core Services,Cloud Computing,Intermediate,30,"EC2, S3, RDS, IAM, VPC, and Lambda"
-88,Azure Fundamentals,Cloud Computing,Intermediate,25,"Azure VMs, Blob Storage, Azure AD, and ARM templates"
-89,Google Cloud Platform,Cloud Computing,Intermediate,25,"GCE, GCS, BigQuery, Cloud Run, and IAM"
-90,Containerization with Docker,Cloud Computing,Intermediate,20,"Images, containers, Dockerfile, volumes, and networking"
-91,Kubernetes,Cloud Computing,Advanced,40,"Pods, deployments, services, ingress, and Helm charts"
-92,Infrastructure as Code (Terraform),Cloud Computing,Advanced,30,"Providers, modules, state management, and plan/apply workflow"
-93,CI/CD Pipelines,Cloud Computing,Intermediate,20,"GitHub Actions, Jenkins, GitLab CI, and deployment strategies"
-94,Serverless Architecture,Cloud Computing,Intermediate,25,"Functions as a Service, event triggers, and cold starts"
-95,Cloud Networking,Cloud Computing,Advanced,30,"VPCs, subnets, load balancers, VPNs, and CDN configuration"
-96,Cloud Security,Cloud Computing,Advanced,30,"IAM best practices, encryption, compliance, and threat detection"
-97,Cost Optimization,Cloud Computing,Intermediate,15,"Reserved instances, spot pricing, rightsizing, and FinOps"
-98,Observability & Monitoring,Cloud Computing,Intermediate,20,"Metrics, logs, traces, Prometheus, Grafana, and OpenTelemetry"
-99,Multi-Cloud Strategy,Cloud Computing,Advanced,35,"Vendor lock-in avoidance, hybrid cloud, and workload portability"
-100,Cloud Databases,Cloud Computing,Intermediate,20,"Managed SQL, NoSQL, in-memory caches, and data warehouses"
-101,Event-Driven Architecture,Cloud Computing,Advanced,30,"Kafka, SQS/SNS, event sourcing, and CQRS"
-102,Microservices on Cloud,Cloud Computing,Advanced,40,"Service mesh, Istio, API gateways, and distributed tracing"
-103,DevOps Culture,Cloud Computing,Intermediate,15,"Collaboration, automation, feedback loops, and blameless postmortems"
-104,Cloud Storage & CDN,Cloud Computing,Beginner,10,"Object storage, lifecycle policies, edge caching, and delivery"
-105,Disaster Recovery & HA,Cloud Computing,Advanced,30,"RTO/RPO, failover, geo-redundancy, and chaos engineering"
-106,Security Fundamentals,Cybersecurity,Beginner,20,"CIA triad, threat modeling, attack surfaces, and defense in depth"
-107,Network Security,Cybersecurity,Intermediate,30,"Firewalls, IDS/IPS, VPNs, and network protocol security"
-108,Cryptography,Cybersecurity,Advanced,35,"Symmetric/asymmetric encryption, PKI, TLS, and hash functions"
-109,Penetration Testing,Cybersecurity,Advanced,40,"Recon, exploitation, post-exploitation, and reporting"
-110,Ethical Hacking,Cybersecurity,Advanced,35,"Legal frameworks, vulnerability scanning, and bug bounty"
-111,Web Application Security,Cybersecurity,Intermediate,25,"OWASP Top 10, burp suite, authentication flaws, and secure coding"
-112,Malware Analysis,Cybersecurity,Advanced,40,"Static and dynamic analysis, reverse engineering, and sandboxing"
-113,Digital Forensics,Cybersecurity,Advanced,35,"Evidence acquisition, file system analysis, and memory forensics"
-114,Incident Response,Cybersecurity,Advanced,30,"Detection, containment, eradication, recovery, and lessons learned"
-115,Security Operations Center (SOC),Cybersecurity,Intermediate,25,"SIEM, alert triage, threat hunting, and playbooks"
-116,Identity & Access Management,Cybersecurity,Intermediate,20,"SSO, MFA, privileged access, and zero trust"
-117,Cloud Security2,Cybersecurity,Advanced,30,"Shared responsibility, misconfiguration risks, and CSPM"
-118,Social Engineering,Cybersecurity,Intermediate,15,"Phishing, pretexting, baiting, and security awareness training"
-119,Vulnerability Management,Cybersecurity,Intermediate,20,"CVE, CVSS, patch management, and risk prioritization"
-120,Secure Software Development,Cybersecurity,Intermediate,25,"SAST, DAST, dependency scanning, and security in SDLC"
-121,Risk Management,Cybersecurity,Intermediate,20,"Risk assessment frameworks, NIST, ISO 27001, and controls"
-122,Container & Kubernetes Security,Cybersecurity,Advanced,30,"Image scanning, RBAC, network policies, and runtime security"
-123,Red vs Blue Team Operations,Cybersecurity,Advanced,35,"Adversary emulation, purple teaming, and tabletop exercises"
-124,Threat Intelligence,Cybersecurity,Advanced,25,"IOCs, TTPs, MITRE ATT&CK, and intelligence sharing"
-125,Compliance & Regulations,Cybersecurity,Intermediate,20,"GDPR, HIPAA, PCI-DSS, SOC 2, and audit preparation"
-126,Linear Algebra,Mathematics,Intermediate,40,"Vectors, matrices, eigenvalues, and linear transformations"
-127,Calculus,Mathematics,Intermediate,45,"Limits, derivatives, integrals, and multivariate calculus"
-128,Probability Theory2,Mathematics,Intermediate,30,"Random variables, distributions, expectation, and variance"
-129,Statistics,Mathematics,Intermediate,30,"Descriptive stats, inference, regression, and hypothesis testing"
-130,Discrete Mathematics,Mathematics,Intermediate,35,"Logic, sets, graph theory, combinatorics, and proofs"
-131,Numerical Methods,Mathematics,Advanced,35,"Root finding, interpolation, ODE solvers, and numerical integration"
-132,Optimization Theory,Mathematics,Advanced,40,"Convex optimization, gradient methods, and constraint handling"
-133,Information Theory,Mathematics,Advanced,30,"Entropy, mutual information, channel capacity, and coding"
-134,Differential Equations,Mathematics,Advanced,40,"ODEs, PDEs, systems of equations, and numerical solutions"
-135,Abstract Algebra,Mathematics,Advanced,45,"Groups, rings, fields, homomorphisms, and Galois theory"
-136,Real Analysis,Mathematics,Advanced,45,"Limits, continuity, measure theory, and functional analysis"
-137,Complex Analysis,Mathematics,Advanced,40,"Complex functions, contour integration, and residue theorem"
-138,Topology,Mathematics,Advanced,50,"Metric spaces, continuity, compactness, and connectedness"
-139,Game Theory,Mathematics,Intermediate,30,"Nash equilibria, zero-sum games, mechanism design, and auctions"
-140,Mathematical Logic,Mathematics,Advanced,35,"Propositional logic, predicate logic, proof systems, and Gödel"
-141,Number Theory,Mathematics,Intermediate,30,"Divisibility, primes, modular arithmetic, and RSA foundations"
-142,Graph Theory,Mathematics,Intermediate,30,"Paths, cycles, coloring, matching, and network flow"
-143,Stochastic Processes,Mathematics,Advanced,40,"Markov chains, Poisson processes, Brownian motion, and queuing"
-144,Fourier Analysis,Mathematics,Advanced,35,"Fourier series, transforms, DFT, FFT, and signal processing"
-145,Combinatorics,Mathematics,Intermediate,30,"Counting principles, permutations, combinations, and generating functions"
-146,Kotlin Programming,Programming,Intermediate,25,Modern JVM language for Android and server-side development
-147,Swift Programming,Programming,Intermediate,25,"Apple's language for iOS, macOS, and server-side development"
-148,Scala & Functional JVM,Programming,Advanced,35,Functional and OOP hybrid for data engineering and distributed systems
-149,Ruby on Rails,Programming,Intermediate,25,Convention-over-configuration web framework for rapid development
-150,PHP & Laravel,Programming,Intermediate,20,Server-side scripting and the Laravel MVC framework
-151,Dask & Parallel Computing,Data Science,Advanced,25,Scalable Python analytics for datasets larger than RAM
-152,PySpark & Big Data,Data Science,Advanced,30,Distributed data processing with Apache Spark and Python
-153,Data Quality & Validation,Data Science,Intermediate,15,"Great Expectations, data contracts, and schema enforcement"
-154,Speech Recognition,Artificial Intelligence,Advanced,35,"ASR systems, Whisper, and voice interface development"
-155,Multi-Agent Systems,Artificial Intelligence,Advanced,40,"Coordination, communication, and emergent behavior in AI agents"
-156,WebAssembly,Web Development,Advanced,25,High-performance web apps using WASM and Rust/C++ compilation
-157,Three.js & WebGL,Web Development,Advanced,30,"3D graphics, shaders, and interactive visualizations in the browser"
-158,Platform Engineering,Cloud Computing,Advanced,35,"Internal developer platforms, golden paths, and self-service infra"
-159,FinOps & Cloud Cost Management,Cloud Computing,Intermediate,20,"Cost allocation, tagging strategies, and optimization workflows"
-160,Zero Trust Architecture,Cybersecurity,Advanced,25,"Never trust, always verify: micro-segmentation and identity-first security"
-161,AI-Powered Security,Cybersecurity,Advanced,30,"Using ML for threat detection, anomaly detection, and UEBA"
-162,Measure Theory,Mathematics,Advanced,45,"Sigma algebras, Lebesgue integration, and rigorous probability foundations"
-163,Algebraic Topology,Mathematics,Advanced,50,"Homology, cohomology, fundamental groups, and persistent homology"
-164,Convex Analysis,Mathematics,Advanced,35,"Convex sets, conjugate functions, and optimality conditions"
-165,Synthetic Data Generation,Data Science,Advanced,25,"GANs, VAEs, and privacy-preserving synthetic dataset creation"
+skill_id,skill_name,category,difficulty,estimated_learning_hours,description,aliases
+1,Python Basics,Programming,Beginner,20.0,"Fundamental Python syntax, variables, data types, and basic operations","python,py,python3"
+2,Data Structures,Programming,Intermediate,30.0,"Arrays, linked lists, stacks, queues, trees, and graphs","DS,data-structures"
+3,Algorithms,Programming,Advanced,40.0,"Sorting, searching, dynamic programming, and algorithm analysis","algo,DSA"
+4,Object-Oriented Programming,Programming,Intermediate,25.0,"Classes, inheritance, polymorphism, and encapsulation",
+5,Functional Programming,Programming,Intermediate,20.0,"Pure functions, immutability, higher-order functions, and monads",
+6,Concurrency & Multithreading,Programming,Advanced,30.0,"Threads, async/await, locks, race conditions, and parallel execution",
+7,Design Patterns,Programming,Advanced,35.0,"GoF patterns: creational, structural, behavioral",
+8,Testing & TDD,Programming,Intermediate,20.0,"Unit tests, mocking, test-driven development, and CI integration",
+9,Version Control (Git),Programming,Beginner,10.0,"Branching, merging, rebasing, and collaborative workflows",
+10,Command Line & Shell Scripting,Programming,Beginner,15.0,"Bash scripting, file operations, piping, and environment management",
+11,Regular Expressions,Programming,Intermediate,10.0,"Pattern matching, groups, lookaheads, and substitution",
+12,Debugging Techniques,Programming,Intermediate,15.0,"Breakpoints, profiling, logging, and error tracing",
+13,Code Review Best Practices,Programming,Intermediate,10.0,"Readable code, constructive feedback, and review workflows",
+14,API Design,Programming,Advanced,25.0,"REST, GraphQL, versioning, and documentation",
+15,Database Programming,Programming,Intermediate,25.0,"SQL queries, ORM, transactions, and indexing",
+16,Memory Management,Programming,Advanced,30.0,"Pointers, garbage collection, heap vs stack, and memory leaks",
+17,Compiler Design,Programming,Advanced,50.0,"Lexing, parsing, AST, semantic analysis, and code generation",
+18,Networking Fundamentals for Developers,Programming,Intermediate,20.0,"Sockets, HTTP, TCP/IP stack, and network debugging",
+19,Software Architecture,Programming,Advanced,40.0,"Monolith vs microservices, layered architecture, and SOLID",
+20,Performance Optimization,Programming,Advanced,30.0,"Profiling, caching, algorithmic complexity, and benchmarking",
+21,Rust Programming,Programming,Advanced,40.0,"Ownership, borrowing, lifetimes, and safe concurrency",
+22,Go Programming,Programming,Intermediate,25.0,"Goroutines, channels, interfaces, and the Go toolchain",
+23,Java Programming,Programming,Intermediate,30.0,"JVM, generics, streams, and enterprise patterns",
+24,C++ Programming,Programming,Advanced,40.0,"Pointers, templates, STL, and systems programming",
+25,TypeScript,Programming,Intermediate,20.0,"Type system, interfaces, generics, and tooling",
+26,Data Wrangling with Pandas,Data Science,Intermediate,25.0,"DataFrames, groupby, merging, and cleaning messy datasets",
+27,Exploratory Data Analysis,Data Science,Intermediate,20.0,"Statistical summaries, distributions, outliers, and visualization",
+28,Feature Engineering,Data Science,Advanced,30.0,"Encoding, scaling, interaction features, and feature selection",
+29,Statistical Inference,Data Science,Intermediate,35.0,"Hypothesis testing, confidence intervals, and p-values",
+30,Probability Theory,Data Science,Intermediate,30.0,"Random variables, distributions, Bayes theorem, and expectation",
+31,Data Visualization,Data Science,Beginner,15.0,"Matplotlib, Seaborn, Plotly, and storytelling with data",
+32,Time Series Analysis,Data Science,Advanced,35.0,"ARIMA, seasonal decomposition, and forecasting",
+33,A/B Testing,Data Science,Intermediate,20.0,"Experimental design, sample size, and statistical significance",
+34,SQL for Data Science,Data Science,Beginner,20.0,"Aggregations, window functions, subqueries, and optimization",
+35,Data Pipeline Design,Data Science,Advanced,30.0,"ETL, batch vs streaming, orchestration, and data quality",
+36,NoSQL Databases,Data Science,Intermediate,20.0,"Document stores, key-value, column-family, and graph databases",
+37,Web Scraping,Data Science,Intermediate,15.0,"BeautifulSoup, Scrapy, handling JS-rendered pages, and rate limiting",
+38,Data Ethics & Privacy,Data Science,Beginner,10.0,"Bias, fairness, GDPR, anonymization, and responsible data use",
+39,Bayesian Statistics,Data Science,Advanced,40.0,"Prior/posterior, MCMC, hierarchical models, and PyMC",
+40,Dimensionality Reduction,Data Science,Advanced,25.0,"PCA, t-SNE, UMAP, and manifold learning",
+41,Recommender Systems,Data Science,Advanced,35.0,"Collaborative filtering, content-based, and matrix factorization",
+42,Graph Analytics,Data Science,Advanced,30.0,"Network centrality, community detection, and graph databases",
+43,Geospatial Analysis,Data Science,Intermediate,25.0,"GeoDataFrames, spatial joins, choropleth maps, and PostGIS",
+44,Business Intelligence,Data Science,Beginner,20.0,"KPIs, dashboards, Tableau, and Power BI basics",
+45,Data Storytelling,Data Science,Intermediate,15.0,"Narrative structure, audience targeting, and slide design",
+46,Machine Learning Fundamentals,Artificial Intelligence,Intermediate,40.0,"Supervised, unsupervised, and reinforcement learning overview",
+47,Linear & Logistic Regression,Artificial Intelligence,Beginner,20.0,"Regression analysis, loss functions, and gradient descent",
+48,Decision Trees & Random Forests,Artificial Intelligence,Intermediate,25.0,"Splitting criteria, bagging, boosting, and feature importance",
+49,Support Vector Machines,Artificial Intelligence,Intermediate,25.0,"Kernels, margin maximization, and SVM classification",
+50,Neural Networks Basics,Artificial Intelligence,Intermediate,30.0,"Perceptrons, backpropagation, activation functions, and layers",
+51,Deep Learning,Artificial Intelligence,Advanced,50.0,"CNNs, RNNs, LSTMs, and training large networks","DL,neural-networks"
+52,Natural Language Processing,Artificial Intelligence,Advanced,45.0,"Tokenization, embeddings, transformers, and text classification",
+53,Computer Vision,Artificial Intelligence,Advanced,45.0,"Image classification, object detection, segmentation, and GANs",
+54,Reinforcement Learning,Artificial Intelligence,Advanced,50.0,"MDPs, Q-learning, policy gradients, and actor-critic methods",
+55,Model Evaluation & Metrics,Artificial Intelligence,Intermediate,20.0,"Accuracy, precision, recall, ROC, and cross-validation",
+56,Hyperparameter Tuning,Artificial Intelligence,Intermediate,20.0,"Grid search, random search, Bayesian optimization, and Optuna",
+57,Transfer Learning,Artificial Intelligence,Advanced,30.0,"Fine-tuning pretrained models, domain adaptation, and few-shot",
+58,Generative AI & LLMs,Artificial Intelligence,Advanced,40.0,"Prompt engineering, RAG, fine-tuning, and LLM evaluation",
+59,MLOps,Artificial Intelligence,Advanced,35.0,"Model versioning, deployment, monitoring, and CI/CD for ML",
+60,Explainable AI,Artificial Intelligence,Advanced,30.0,"SHAP, LIME, feature attribution, and model transparency",
+61,Graph Neural Networks,Artificial Intelligence,Advanced,40.0,"Message passing, GCN, GAT, and molecular property prediction",
+62,Federated Learning,Artificial Intelligence,Advanced,35.0,"Privacy-preserving ML, differential privacy, and aggregation",
+63,AI Ethics & Fairness,Artificial Intelligence,Intermediate,20.0,"Bias auditing, fairness metrics, and responsible AI frameworks",
+64,AutoML,Artificial Intelligence,Intermediate,20.0,"Neural architecture search, automated feature engineering, and H2O",
+65,Causal Inference,Artificial Intelligence,Advanced,40.0,"Do-calculus, counterfactuals, instrumental variables, and DAGs",
+66,HTML & CSS Fundamentals,Web Development,Beginner,15.0,"Semantic markup, box model, selectors, and basic layouts",
+67,Responsive Web Design,Web Development,Beginner,15.0,"Media queries, flexbox, CSS grid, and mobile-first approach",
+68,JavaScript Fundamentals,Web Development,Beginner,25.0,"DOM manipulation, events, closures, and ES6+ features",
+69,React.js,Web Development,Intermediate,30.0,"Components, hooks, state management, and the virtual DOM",
+70,Vue.js,Web Development,Intermediate,25.0,"Options API, composition API, reactivity, and Vue Router",
+71,Node.js & Express,Web Development,Intermediate,25.0,"Server-side JS, middleware, routing, and REST APIs",
+72,Next.js,Web Development,Intermediate,25.0,"SSR, SSG, ISR, API routes, and deployment on Vercel",
+73,GraphQL,Web Development,Intermediate,20.0,"Schemas, resolvers, queries, mutations, and Apollo Client",
+74,RESTful API Development,Web Development,Intermediate,20.0,"HTTP methods, status codes, authentication, and OpenAPI",
+75,Web Accessibility (a11y),Web Development,Intermediate,15.0,"WCAG guidelines, ARIA roles, screen readers, and audits",
+76,Progressive Web Apps,Web Development,Intermediate,20.0,"Service workers, offline support, push notifications, and manifests",
+77,WebSockets & Real-time Apps,Web Development,Advanced,25.0,"Socket.io, pub/sub, chat apps, and live dashboards",
+78,Authentication & Authorization,Web Development,Advanced,25.0,"JWT, OAuth 2.0, OpenID Connect, and session management",
+79,Web Security,Web Development,Advanced,25.0,"XSS, CSRF, SQL injection, HTTPS, and CSP headers",
+80,Frontend Performance,Web Development,Advanced,20.0,"Code splitting, lazy loading, caching, and Core Web Vitals",
+81,CSS Frameworks (Tailwind),Web Development,Beginner,10.0,"Utility-first CSS, custom themes, and component design",
+82,Testing Frontend Apps,Web Development,Intermediate,20.0,"Jest, React Testing Library, Cypress, and visual regression",
+83,Browser DevTools,Web Development,Beginner,10.0,"Debugging, network analysis, performance profiling, and storage",
+84,Web Components,Web Development,Intermediate,20.0,"Custom elements, shadow DOM, templates, and slots",
+85,Svelte,Web Development,Intermediate,20.0,"Reactive declarations, stores, transitions, and SvelteKit",
+86,Cloud Fundamentals,Cloud Computing,Beginner,15.0,"IaaS, PaaS, SaaS, shared responsibility model, and major providers",
+87,AWS Core Services,Cloud Computing,Intermediate,30.0,"EC2, S3, RDS, IAM, VPC, and Lambda",
+88,Azure Fundamentals,Cloud Computing,Intermediate,25.0,"Azure VMs, Blob Storage, Azure AD, and ARM templates",
+89,Google Cloud Platform,Cloud Computing,Intermediate,25.0,"GCE, GCS, BigQuery, Cloud Run, and IAM",
+90,Containerization with Docker,Cloud Computing,Intermediate,20.0,"Images, containers, Dockerfile, volumes, and networking",
+91,Kubernetes,Cloud Computing,Advanced,40.0,"Pods, deployments, services, ingress, and Helm charts",
+92,Infrastructure as Code (Terraform),Cloud Computing,Advanced,30.0,"Providers, modules, state management, and plan/apply workflow",
+93,CI/CD Pipelines,Cloud Computing,Intermediate,20.0,"GitHub Actions, Jenkins, GitLab CI, and deployment strategies",
+94,Serverless Architecture,Cloud Computing,Intermediate,25.0,"Functions as a Service, event triggers, and cold starts",
+95,Cloud Networking,Cloud Computing,Advanced,30.0,"VPCs, subnets, load balancers, VPNs, and CDN configuration",
+96,Cloud Security,Cloud Computing,Advanced,30.0,"IAM best practices, encryption, compliance, and threat detection",
+97,Cost Optimization,Cloud Computing,Intermediate,15.0,"Reserved instances, spot pricing, rightsizing, and FinOps",
+98,Observability & Monitoring,Cloud Computing,Intermediate,20.0,"Metrics, logs, traces, Prometheus, Grafana, and OpenTelemetry",
+99,Multi-Cloud Strategy,Cloud Computing,Advanced,35.0,"Vendor lock-in avoidance, hybrid cloud, and workload portability",
+100,Cloud Databases,Cloud Computing,Intermediate,20.0,"Managed SQL, NoSQL, in-memory caches, and data warehouses",
+101,Event-Driven Architecture,Cloud Computing,Advanced,30.0,"Kafka, SQS/SNS, event sourcing, and CQRS",
+102,Microservices on Cloud,Cloud Computing,Advanced,40.0,"Service mesh, Istio, API gateways, and distributed tracing",
+103,DevOps Culture,Cloud Computing,Intermediate,15.0,"Collaboration, automation, feedback loops, and blameless postmortems",
+104,Cloud Storage & CDN,Cloud Computing,Beginner,10.0,"Object storage, lifecycle policies, edge caching, and delivery",
+105,Disaster Recovery & HA,Cloud Computing,Advanced,30.0,"RTO/RPO, failover, geo-redundancy, and chaos engineering",
+106,Security Fundamentals,Cybersecurity,Beginner,20.0,"CIA triad, threat modeling, attack surfaces, and defense in depth",
+107,Network Security,Cybersecurity,Intermediate,30.0,"Firewalls, IDS/IPS, VPNs, and network protocol security",
+108,Cryptography,Cybersecurity,Advanced,35.0,"Symmetric/asymmetric encryption, PKI, TLS, and hash functions",
+109,Penetration Testing,Cybersecurity,Advanced,40.0,"Recon, exploitation, post-exploitation, and reporting",
+110,Ethical Hacking,Cybersecurity,Advanced,35.0,"Legal frameworks, vulnerability scanning, and bug bounty",
+111,Web Application Security,Cybersecurity,Intermediate,25.0,"OWASP Top 10, burp suite, authentication flaws, and secure coding",
+112,Malware Analysis,Cybersecurity,Advanced,40.0,"Static and dynamic analysis, reverse engineering, and sandboxing",
+113,Digital Forensics,Cybersecurity,Advanced,35.0,"Evidence acquisition, file system analysis, and memory forensics",
+114,Incident Response,Cybersecurity,Advanced,30.0,"Detection, containment, eradication, recovery, and lessons learned",
+115,Security Operations Center (SOC),Cybersecurity,Intermediate,25.0,"SIEM, alert triage, threat hunting, and playbooks",
+116,Identity & Access Management,Cybersecurity,Intermediate,20.0,"SSO, MFA, privileged access, and zero trust",
+117,Cloud Security2,Cybersecurity,Advanced,30.0,"Shared responsibility, misconfiguration risks, and CSPM",
+118,Social Engineering,Cybersecurity,Intermediate,15.0,"Phishing, pretexting, baiting, and security awareness training",
+119,Vulnerability Management,Cybersecurity,Intermediate,20.0,"CVE, CVSS, patch management, and risk prioritization",
+120,Secure Software Development,Cybersecurity,Intermediate,25.0,"SAST, DAST, dependency scanning, and security in SDLC",
+121,Risk Management,Cybersecurity,Intermediate,20.0,"Risk assessment frameworks, NIST, ISO 27001, and controls",
+122,Container & Kubernetes Security,Cybersecurity,Advanced,30.0,"Image scanning, RBAC, network policies, and runtime security",
+123,Red vs Blue Team Operations,Cybersecurity,Advanced,35.0,"Adversary emulation, purple teaming, and tabletop exercises",
+124,Threat Intelligence,Cybersecurity,Advanced,25.0,"IOCs, TTPs, MITRE ATT&CK, and intelligence sharing",
+125,Compliance & Regulations,Cybersecurity,Intermediate,20.0,"GDPR, HIPAA, PCI-DSS, SOC 2, and audit preparation",
+126,Linear Algebra,Mathematics,Intermediate,40.0,"Vectors, matrices, eigenvalues, and linear transformations","linalg,matrices"
+127,Calculus,Mathematics,Intermediate,45.0,"Limits, derivatives, integrals, and multivariate calculus",
+128,Probability Theory2,Mathematics,Intermediate,30.0,"Random variables, distributions, expectation, and variance",
+129,Statistics,Mathematics,Intermediate,30.0,"Descriptive stats, inference, regression, and hypothesis testing","stats,probability"
+130,Discrete Mathematics,Mathematics,Intermediate,35.0,"Logic, sets, graph theory, combinatorics, and proofs",
+131,Numerical Methods,Mathematics,Advanced,35.0,"Root finding, interpolation, ODE solvers, and numerical integration",
+132,Optimization Theory,Mathematics,Advanced,40.0,"Convex optimization, gradient methods, and constraint handling",
+133,Information Theory,Mathematics,Advanced,30.0,"Entropy, mutual information, channel capacity, and coding",
+134,Differential Equations,Mathematics,Advanced,40.0,"ODEs, PDEs, systems of equations, and numerical solutions",
+135,Abstract Algebra,Mathematics,Advanced,45.0,"Groups, rings, fields, homomorphisms, and Galois theory",
+136,Real Analysis,Mathematics,Advanced,45.0,"Limits, continuity, measure theory, and functional analysis",
+137,Complex Analysis,Mathematics,Advanced,40.0,"Complex functions, contour integration, and residue theorem",
+138,Topology,Mathematics,Advanced,50.0,"Metric spaces, continuity, compactness, and connectedness",
+139,Game Theory,Mathematics,Intermediate,30.0,"Nash equilibria, zero-sum games, mechanism design, and auctions",
+140,Mathematical Logic,Mathematics,Advanced,35.0,"Propositional logic, predicate logic, proof systems, and Gödel",
+141,Number Theory,Mathematics,Intermediate,30.0,"Divisibility, primes, modular arithmetic, and RSA foundations",
+142,Graph Theory,Mathematics,Intermediate,30.0,"Paths, cycles, coloring, matching, and network flow",
+143,Stochastic Processes,Mathematics,Advanced,40.0,"Markov chains, Poisson processes, Brownian motion, and queuing",
+144,Fourier Analysis,Mathematics,Advanced,35.0,"Fourier series, transforms, DFT, FFT, and signal processing",
+145,Combinatorics,Mathematics,Intermediate,30.0,"Counting principles, permutations, combinations, and generating functions",
+146,Kotlin Programming,Programming,Intermediate,25.0,Modern JVM language for Android and server-side development,
+147,Swift Programming,Programming,Intermediate,25.0,"Apple's language for iOS, macOS, and server-side development",
+148,Scala & Functional JVM,Programming,Advanced,35.0,Functional and OOP hybrid for data engineering and distributed systems,
+149,Ruby on Rails,Programming,Intermediate,25.0,Convention-over-configuration web framework for rapid development,
+150,PHP & Laravel,Programming,Intermediate,20.0,Server-side scripting and the Laravel MVC framework,
+151,Dask & Parallel Computing,Data Science,Advanced,25.0,Scalable Python analytics for datasets larger than RAM,
+152,PySpark & Big Data,Data Science,Advanced,30.0,Distributed data processing with Apache Spark and Python,
+153,Data Quality & Validation,Data Science,Intermediate,15.0,"Great Expectations, data contracts, and schema enforcement",
+154,Speech Recognition,Artificial Intelligence,Advanced,35.0,"ASR systems, Whisper, and voice interface development",
+155,Multi-Agent Systems,Artificial Intelligence,Advanced,40.0,"Coordination, communication, and emergent behavior in AI agents",
+156,WebAssembly,Web Development,Advanced,25.0,High-performance web apps using WASM and Rust/C++ compilation,
+157,Three.js & WebGL,Web Development,Advanced,30.0,"3D graphics, shaders, and interactive visualizations in the browser",
+158,Platform Engineering,Cloud Computing,Advanced,35.0,"Internal developer platforms, golden paths, and self-service infra",
+159,FinOps & Cloud Cost Management,Cloud Computing,Intermediate,20.0,"Cost allocation, tagging strategies, and optimization workflows",
+160,Zero Trust Architecture,Cybersecurity,Advanced,25.0,"Never trust, always verify: micro-segmentation and identity-first security",
+161,AI-Powered Security,Cybersecurity,Advanced,30.0,"Using ML for threat detection, anomaly detection, and UEBA",
+162,Measure Theory,Mathematics,Advanced,45.0,"Sigma algebras, Lebesgue integration, and rigorous probability foundations",
+163,Algebraic Topology,Mathematics,Advanced,50.0,"Homology, cohomology, fundamental groups, and persistent homology",
+164,Convex Analysis,Mathematics,Advanced,35.0,"Convex sets, conjugate functions, and optimality conditions",
+165,Synthetic Data Generation,Data Science,Advanced,25.0,"GANs, VAEs, and privacy-preserving synthetic dataset creation",
+cd0c03bf-05c4-4208-a13c-261e7386d05e,Python programming,Extracted,,,,
+2e620ef7-5056-4ab1-9b68-744b13c41cdb,SQL queries,Extracted,,,,
+944ae317-76cb-401b-8972-aae31c16ebbe,Redux,Extracted,,,,
+ca1cdb60-54d7-4f5a-97c7-3d2b00dff7a8,Tailwind CSS,Extracted,,,,
+92d202dd-e472-48bc-85c4-655104e5f40d,Deep learning neural networks,Extracted,,,,
+4cd604c9-4699-429e-b197-27b762d52b2e,Pandas for data analysis,Extracted,,,,
+80ced3cb-b3e2-4ec4-9eae-89f8fc297241,TailwindCSS,Extracted,,,,
+92b231e8-e102-4409-9eeb-98d1bcc5594e,cloud engineering with AWS,Extracted,,,,
