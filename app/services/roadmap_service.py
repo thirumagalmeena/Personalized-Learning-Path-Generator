@@ -16,14 +16,15 @@ class RoadmapService:
             
         # 1.5 Check Cache
         goal_id = str(user_profile.get("goal_id", "default"))
+        
+        goal_name = "Unknown Goal"
+        goals_df = csv_handler.read_csv("goals.csv")
+        if not goals_df.empty:
+            matches = goals_df[goals_df["goal_id"].astype(str) == goal_id]
+            if not matches.empty:
+                goal_name = matches.iloc[0]["goal_name"]
+                
         cache_file = os.path.join(settings.APP_DATA_DIR, f"{user_id}_{goal_id}_roadmap.json")
-        if os.path.exists(cache_file):
-            try:
-                with open(cache_file, "r") as f:
-                    return json.load(f)
-            except Exception:
-                pass
-            
         # 2. Identify missing skills
         missing_skills = gap_analysis_service.identify_missing_skills(user_id)
         
@@ -52,14 +53,15 @@ class RoadmapService:
             "missing_skills": missing_skills,
             "possessed_skills": possessed_skills,
             "resources": rag_context.get("resources", []),
-            "projects": rag_context.get("projects", [])
+            "projects": rag_context.get("projects", []),
+            "goal_skill_name": goal_name
         }
         
         # 5. Generate Roadmap via LLM
         roadmap_dict = llm_service.generate_roadmap(context)
         
         # 6. Save to Cache
-        if roadmap_dict and roadmap_dict.get("phases"):
+        if roadmap_dict and (roadmap_dict.get("phases") or roadmap_dict.get("roadmap_text")):
             try:
                 with open(cache_file, "w") as f:
                     json.dump(roadmap_dict, f)
@@ -67,5 +69,30 @@ class RoadmapService:
                 pass
         
         return roadmap_dict
+
+    def get_saved_roadmaps(self, user_id: str):
+        goals_df = csv_handler.read_csv("goals.csv")
+        saved = []
+        if not os.path.exists(settings.APP_DATA_DIR):
+            return saved
+        for filename in os.listdir(settings.APP_DATA_DIR):
+            if filename.startswith(f"{user_id}_") and filename.endswith("_roadmap.json"):
+                parts = filename.split("_")
+                if len(parts) >= 3:
+                    goal_id = parts[1]
+                    goal_name = "Unknown Goal"
+                    if not goals_df.empty:
+                        matches = goals_df[goals_df["goal_id"].astype(str) == goal_id]
+                        if not matches.empty:
+                            goal_name = matches.iloc[0]["goal_name"]
+                    saved.append({"goal_id": goal_id, "goal_name": goal_name})
+        return saved
+
+    def get_saved_roadmap(self, user_id: str, goal_id: str):
+        cache_file = os.path.join(settings.APP_DATA_DIR, f"{user_id}_{goal_id}_roadmap.json")
+        if os.path.exists(cache_file):
+            with open(cache_file, "r") as f:
+                return json.load(f)
+        return None
 
 roadmap_service = RoadmapService()

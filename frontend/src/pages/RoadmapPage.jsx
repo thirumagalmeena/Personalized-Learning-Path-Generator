@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FiExternalLink, FiBook, FiCode, FiStar, FiX, FiRefreshCw } from 'react-icons/fi';
-import { generateRoadmap, submitFeedback } from '../api/roadmap';
+import { useParams } from 'react-router-dom';
+import { FiExternalLink, FiBook, FiCode, FiStar, FiX, FiRefreshCw, FiClock } from 'react-icons/fi';
+import { generateRoadmap, submitFeedback, getSavedRoadmap } from '../api/roadmap';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function StarRating({ value, onChange }) {
   const [hovered, setHovered] = useState(0);
   return (
     <div className="star-rating">
-      {[1,2,3,4,5].map((s) => (
+      {[1, 2, 3, 4, 5].map((s) => (
         <span
           key={s}
           className={`star ${s <= (hovered || value) ? 'active' : ''}`}
@@ -54,8 +56,7 @@ function FeedbackModal({ resource, onClose }) {
         </button>
         {done ? (
           <div style={{ textAlign: 'center', padding: '20px 0' }}>
-            <div style={{ fontSize: '2rem', marginBottom: 8 }}>🎉</div>
-            <h3>Thanks for your feedback!</h3>
+            <h3 style={{ marginTop: 16 }}>Thanks for your feedback!</h3>
           </div>
         ) : (
           <>
@@ -83,19 +84,26 @@ export default function RoadmapPage() {
   const [error, setError] = useState('');
   const [feedbackResource, setFeedbackResource] = useState(null);
 
+  const { goalId } = useParams();
+
   const fetchRoadmap = async () => {
     setLoading(true);
     setError('');
     setRoadmap(null);
     try {
-      const res = await generateRoadmap();
+      let res;
+      if (goalId) {
+        res = await getSavedRoadmap(goalId);
+      } else {
+        res = await generateRoadmap();
+      }
       setRoadmap(res.data);
     } catch (err) {
       const detail = err.response?.data?.detail;
       if (err.response?.status === 400 || (detail && detail.includes('profile'))) {
         navigate('/onboarding');
       } else {
-        setError(detail || 'Failed to generate roadmap. Make sure Ollama is running.');
+        setError(detail || 'Failed to generate or retrieve roadmap.');
       }
     } finally {
       setLoading(false);
@@ -104,13 +112,12 @@ export default function RoadmapPage() {
 
   useEffect(() => { fetchRoadmap(); }, []);
 
-  if (loading) return <LoadingSpinner message="Generating your personalized roadmap... This may take up to 30 seconds ☕" />;
+  if (loading) return <LoadingSpinner message="Generating your personalized roadmap... This may take up to 30 seconds" />;
 
   if (error) return (
     <div className="page">
       <div className="container-sm" style={{ textAlign: 'center', paddingTop: 60 }}>
-        <div style={{ fontSize: '3rem', marginBottom: 16 }}>⚠️</div>
-        <h2 style={{ marginBottom: 8 }}>Couldn't generate roadmap</h2>
+        <h2 style={{ marginBottom: 8 }}>Couldn't load roadmap</h2>
         <p style={{ color: 'var(--color-text-muted)', marginBottom: 24 }}>{error}</p>
         <button className="btn btn-primary" onClick={fetchRoadmap}><FiRefreshCw size={16} /> Try Again</button>
       </div>
@@ -126,7 +133,7 @@ export default function RoadmapPage() {
       <div className="container">
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 36, flexWrap: 'wrap', gap: 16 }}>
           <div>
-            <h1 style={{ fontSize: '1.9rem', marginBottom: 6 }}>Your Learning Roadmap 🗺️</h1>
+            <h1 style={{ fontSize: '1.9rem', marginBottom: 6 }}>Your Learning Roadmap</h1>
             <p style={{ color: 'var(--color-text-muted)' }}>
               {phases.length} phases • Personalized just for you
             </p>
@@ -136,7 +143,7 @@ export default function RoadmapPage() {
           </button>
         </div>
 
-        {phases.length === 0 ? (
+        {phases.length === 0 && !roadmap?.roadmap_text ? (
           <div className="card" style={{ textAlign: 'center', padding: 60 }}>
             <p style={{ color: 'var(--color-text-muted)' }}>No phases returned. Try adding more skills first!</p>
             <button className="btn btn-primary" style={{ marginTop: 16 }} onClick={() => navigate('/skills')}>
@@ -144,79 +151,91 @@ export default function RoadmapPage() {
             </button>
           </div>
         ) : (
-          <div className="timeline">
-            {phases.map((phase, i) => (
-              <div key={i} className="phase-card" style={{ animationDelay: `${i * 0.08}s` }}>
-                <div className="card">
-                  <div className="phase-header">
-                    <span className="badge badge-primary">Phase {i + 1}</span>
-                    <h3 className="phase-title">{phase.title}</h3>
-                    {phase.duration && (
-                      <span className="badge badge-accent" style={{ marginLeft: 'auto' }}>⏱ {phase.duration}</span>
-                    )}
-                  </div>
-
-                  {/* Skill Tags */}
-                  {phase.skills?.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
-                      {phase.skills.map((sk, si) => (
-                        <span key={si} className="badge badge-surface">{sk}</span>
-                      ))}
-                    </div>
-                  )}
-
-                  <div className="phase-body">
-                    {/* Resources */}
-                    {phase.resources?.length > 0 && (
-                      <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
-                          <FiBook size={15} color="var(--color-primary)" />
-                          <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Resources</span>
-                        </div>
-                        {phase.resources.map((r, ri) => (
-                          <div key={ri} className="resource-item">
-                            <FiExternalLink size={14} className="resource-icon" />
-                            <div style={{ flex: 1 }}>
-                              <a href={r.url} target="_blank" rel="noreferrer" style={{ fontSize: '0.88rem', fontWeight: 500, color: 'var(--color-text)', display: 'block' }}>
-                                {r.title}
-                              </a>
-                              {r.type && <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>{r.type}</span>}
-                            </div>
-                            <button
-                              onClick={() => setFeedbackResource(r)}
-                              title="Rate this resource"
-                              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--color-text-muted)', padding: 4 }}
-                            >
-                              <FiStar size={15} />
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Projects */}
-                    {phase.projects?.length > 0 && (
-                      <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
-                          <FiCode size={15} color="var(--color-primary)" />
-                          <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Projects</span>
-                        </div>
-                        {phase.projects.map((p, pi) => (
-                          <div key={pi} className="resource-item">
-                            <FiCode size={14} className="resource-icon" />
-                            <div>
-                              <p style={{ fontSize: '0.88rem', fontWeight: 600, marginBottom: 2 }}>{p.title}</p>
-                              <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>{p.description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
+          <>
+            {roadmap?.roadmap_text && (
+              <div className="card" style={{ marginBottom: 24, padding: 32 }}>
+                <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'inherit', fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text)' }}>
+                  {roadmap.roadmap_text}
+                </pre>
               </div>
-            ))}
-          </div>
+            )}
+
+            {phases.length > 0 && (
+              <div className="timeline">
+                {phases.map((phase, i) => (
+                  <div key={i} className="phase-card" style={{ animationDelay: `${i * 0.08}s` }}>
+                    <div className="card">
+                      <div className="phase-header">
+                        <span className="badge badge-primary">Phase {i + 1}</span>
+                        <h3 className="phase-title">{phase.title}</h3>
+                        {phase.duration && (
+                          <span className="badge badge-accent" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 4 }}><FiClock size={12} /> {phase.duration}</span>
+                        )}
+                      </div>
+
+                      {/* Skill Tags */}
+                      {phase.skills?.length > 0 && (
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
+                          {phase.skills.map((sk, si) => (
+                            <span key={si} className="badge badge-surface">{sk}</span>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="phase-body">
+                        {/* Resources */}
+                        {phase.resources?.length > 0 && (
+                          <div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+                              <FiBook size={15} color="var(--color-primary)" />
+                              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Resources</span>
+                            </div>
+                            {phase.resources.map((r, ri) => (
+                              <div key={ri} className="resource-item">
+                                <FiExternalLink size={14} className="resource-icon" />
+                                <div style={{ flex: 1 }}>
+                                  <a href={r.url} target="_blank" rel="noreferrer" style={{ fontSize: '0.88rem', fontWeight: 500, color: 'var(--color-text)', display: 'block' }}>
+                                    {r.title}
+                                  </a>
+                                  {r.type && <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>{r.type}</span>}
+                                </div>
+                                <button
+                                  onClick={() => setFeedbackResource(r)}
+                                  title="Rate this resource"
+                                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--color-text-muted)', padding: 4 }}
+                                >
+                                  <FiStar size={15} />
+                                </button>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Projects */}
+                        {phase.projects?.length > 0 && (
+                          <div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+                              <FiCode size={15} color="var(--color-primary)" />
+                              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Projects</span>
+                            </div>
+                            {phase.projects.map((p, pi) => (
+                              <div key={pi} className="resource-item">
+                                <FiCode size={14} className="resource-icon" />
+                                <div>
+                                  <p style={{ fontSize: '0.88rem', fontWeight: 600, marginBottom: 2 }}>{p.title}</p>
+                                  <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>{p.description}</p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

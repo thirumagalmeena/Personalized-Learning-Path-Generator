@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AuthPage from './pages/AuthPage';
-import OnboardingPage from './pages/OnboardingPage';
-import SkillsPage from './pages/SkillsPage';
+import HomePage from './pages/HomePage';
+import SkillAssessmentPage from './pages/SkillAssessmentPage';
+import MySkillsPage from './pages/MySkillsPage';
 import RoadmapPage from './pages/RoadmapPage';
+import SavedRoadmapsPage from './pages/SavedRoadmapsPage';
 import './styles/global.css';
 
 function ProtectedRoute({ children }) {
@@ -17,10 +19,13 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<AuthPage />} />
-        <Route path="/onboarding" element={<ProtectedRoute><OnboardingPage /></ProtectedRoute>} />
-        <Route path="/skills" element={<ProtectedRoute><SkillsPage /></ProtectedRoute>} />
+        <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
+        <Route path="/assess-skills" element={<ProtectedRoute><SkillAssessmentPage /></ProtectedRoute>} />
+        <Route path="/my-skills" element={<ProtectedRoute><MySkillsPage /></ProtectedRoute>} />
         <Route path="/roadmap" element={<ProtectedRoute><RoadmapPage /></ProtectedRoute>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/roadmap/:goalId" element={<ProtectedRoute><RoadmapPage /></ProtectedRoute>} />
+        <Route path="/saved-roadmaps" element={<ProtectedRoute><SavedRoadmapsPage /></ProtectedRoute>} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
   );

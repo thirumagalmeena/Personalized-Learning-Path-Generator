@@ -55,3 +55,8 @@ user_id,goal_id,experience_level,available_hours_per_week,learning_style,email,h
 4a0a2c6f-bcfb-4302-b9da-c69294251e3e,11,intermediate,15,interactive,Thiru2@example.com,$2b$12$pPREtudlmY6JpZVG/0Wwge/wfJIOGJ78sGOJRTLngT2aUz0RYshWO,Thiru2
 6306d3cc-a3cb-4bf5-81bf-3295600e3cc5,1,beginner,10,visual,Thime29@gmail.com,$2b$12$VwoXQGugZUBCbiXyIeQhwuVwGVTZFMGnJVHAHX46qGf54oPpvLuyK,Thirumagal
 af3135e5-0580-459e-934c-b142f875f823,8,beginner,10,visual,lak@gmail.com,$2b$12$KgV7AMuf2aeg2X2IH0UZqu3ziTozQ4CApfTd3Rub1sa46.iDNVjMS,lakshmi
+8a8213a3-b2f9-4a0d-a2ed-85bde1b3636d,20,beginner,10,visual,lakshmi@gmail.com,$2b$12$M8Fqar7eh1roMFMX0dWsVOXSWN9eESarRvx3eqZl9kOy./rKNDIby,Lakshmi
+99a18993-4a59-4abe-9590-d394111a3bf2,19,beginner,10,visual,jd@mail.com,$2b$12$JpGLmqT4O8kRo/FoK00t2usG0kmeP4iFlMi.PStdKtMb2AnBJBz.u,Jane Doe
+eea6a0c7-cf4d-4cce-9cf6-0ed04747dae6,10,intermediate,10,visual,m@mail.com,$2b$12$NG/iH4Yu5Jj98WD0u5WF5ua8zwBekiu7tzTcbC1nZOfyWg03dsCuK,Maya
+48f52555-332c-4462-b682-2b9afbeea8db,9,beginner,10,visual,elise@mail.com,$2b$12$coc6x8.WdJ.WLXKpknDpOujRKaO0liTEIUMZpfTHVn5BTpYWp5t2K,Elise
+87e7678d-f780-4d0f-97b0-7a1d824b5d2a,,,10,,e@mail.com,$2b$12$PlASC5Vr.BsEQktde4aJxuzw2u5Gsrm6IfMCO0LgT3NIA5oECO97G,Elsa

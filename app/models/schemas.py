@@ -63,7 +63,8 @@ class RoadmapPhase(BaseModel):
     projects: List[ProjectSchema]
 
 class RoadmapResponse(BaseModel):
-    phases: List[RoadmapPhase]
+    phases: Optional[List[RoadmapPhase]] = []
+    roadmap_text: Optional[str] = None
 
 # Feedback Schema
 class FeedbackRequest(BaseModel):

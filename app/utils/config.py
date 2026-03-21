@@ -15,15 +15,15 @@ class Settings(BaseSettings):
     APP_DATA_DIR: str = os.path.join(BASE_DIR, "data")
     
     # LLM Settings
-    OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-    OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "phi3")
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
+    GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
     HF_FALLBACK_MODEL: str = "HuggingFaceH4/zephyr-7b-beta"
     
     # Embeddings
     EMBEDDINGS_MODEL: str = "all-MiniLM-L6-v2"
 
     class Config:
-        env_file = ".env"
+        env_file = "app/.env"
 
 settings = Settings()
 

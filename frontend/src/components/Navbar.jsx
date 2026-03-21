@@ -20,10 +20,13 @@ export default function Navbar() {
         Learning Path
       </div>
       <div className="navbar-links">
-        <button className="btn btn-ghost" onClick={() => navigate('/skills')}>
+        <button className="btn btn-ghost" onClick={() => navigate('/home')}>
+          <FiCompass size={16} /> Home
+        </button>
+        <button className="btn btn-ghost" onClick={() => navigate('/my-skills')}>
           <FiStar size={16} /> Skills
         </button>
-        <button className="btn btn-ghost" onClick={() => navigate('/roadmap')}>
+        <button className="btn btn-ghost" onClick={() => navigate('/saved-roadmaps')}>
           <FiCompass size={16} /> Roadmap
         </button>
         <button className="btn btn-ghost" onClick={handleLogout}>
