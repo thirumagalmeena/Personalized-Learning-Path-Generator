@@ -81,7 +81,7 @@ export default function AuthPage() {
 
         {/* Card */}
         <div className="card">
-          <h2 style={{ marginBottom: 6 }}>{isLogin ? 'Welcome back 👋' : 'Create your account'}</h2>
+          <h2 style={{ marginBottom: 6 }}>{isLogin ? 'Welcome back ' : 'Create your account'}</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginBottom: 28 }}>
             {isLogin ? 'Sign in to continue your learning journey.' : 'Join thousands building their learning paths.'}
           </p>

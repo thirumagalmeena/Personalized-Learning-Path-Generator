@@ -61,14 +61,20 @@ class RoadmapPhase(BaseModel):
     skills: List[str]
     resources: List[ResourceSchema]
     projects: List[ProjectSchema]
+    completed: bool = False
 
 class RoadmapResponse(BaseModel):
     phases: Optional[List[RoadmapPhase]] = []
     roadmap_text: Optional[str] = None
+    is_complete: bool = False
 
 # Feedback Schema
 class FeedbackRequest(BaseModel):
     content_id: str
     content_type: str # resource, project, phase
     rating: int # 1-5
+    comments: Optional[str] = None
+
+class RoadmapFeedbackRequest(BaseModel):
+    rating: int
     comments: Optional[str] = None

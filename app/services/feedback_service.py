@@ -17,6 +17,18 @@ class FeedbackService:
         
         csv_handler.append_row("user_feedback.csv", new_feedback)
         
-        return {"status": "success", "message": "Feedback recorded."}
+    def get_user_feedback(self, user_id: str):
+        try:
+            df = csv_handler.read_csv("user_feedback.csv")
+            if df.empty:
+                return []
+            
+            # Ensure user_id is compared correctly (as string)
+            user_df = df[df['user_id'].astype(str) == str(user_id)]
+            return user_df.to_dict(orient='records')
+        except Exception as e:
+            from app.utils.logger import logger
+            logger.error(f"Error in get_user_feedback: {e}")
+            return []
 
 feedback_service = FeedbackService()

@@ -29,6 +29,9 @@ export default function Navbar() {
         <button className="btn btn-ghost" onClick={() => navigate('/saved-roadmaps')}>
           <FiCompass size={16} /> Roadmap
         </button>
+        <button className="btn btn-ghost" onClick={() => navigate('/my-reviews')}>
+          <FiStar size={16} /> My Reviews
+        </button>
         <button className="btn btn-ghost" onClick={handleLogout}>
           <FiLogOut size={16} /> Logout
         </button>

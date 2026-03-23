@@ -173,3 +173,10 @@ user_id,resource_id,rating,completed,feedback_text,feedback_id,content_id,conten
 50,317.0,5,False,Not enough practice problems.,,,,
 159d7d73-6177-48ee-ab4d-7af46a6d511f,,5,,,2e23b243-cacb-4956-9320-2bad5c47679d,resource-105,resource,The interactive UX design prototype feature was exactly what I was looking for!
 159d7d73-6177-48ee-ab4d-7af46a6d511f,,5,,,c7adb069-a7b9-45f9-be2c-205c6f95f560,resource-105,resource,The interactive UX design prototype feature was exactly what I was looking for!
+8a8213a3-b2f9-4a0d-a2ed-85bde1b3636d,,5,,,a3bea546-a5c1-4ee7-be81-94ad13e01093,http://vision.stanford.edu/teaching/cs231n/,course,Very good!
+f4b24848-6711-4457-a628-d16ed7bf4a7f,,5,,,6b97f9b5-2ee4-41c2-98a8-ee03ca9f6920,https://docs.python.org/3/,official documentation,Excellent resource for beginners!
+f4b24848-6711-4457-a628-d16ed7bf4a7f,,5,,,1ac3f07d-ba51-4550-87bd-0a1a9a52e3e9,https://flask.palletsprojects.com/en/2.0.x/tutorial/,official documentation,This tutorial is very helpful for learning Flask as a beginner!
+8a8213a3-b2f9-4a0d-a2ed-85bde1b3636d,,4,,,e6babc21-5c1b-4255-9736-2271c606e390,https://www.datacamp.com/tracks/data-science-with-python,course,
+8a8213a3-b2f9-4a0d-a2ed-85bde1b3636d,,5,,,2b0a7d01-50d9-4f78-8866-dec89713b6ac,20,roadmap,
+8a8213a3-b2f9-4a0d-a2ed-85bde1b3636d,,5,,,0ab04a09-33a5-4263-a86d-08be85a96623,https://see.stanford.edu/Course/CS231a/lecture1/,course,
+f4b24848-6711-4457-a628-d16ed7bf4a7f,,5,,,0d083f1d-9562-4698-ab43-a92219bde676,https://flask.palletsprojects.com/en/2.0.x/tutorial/,official documentation,Great tutorial!

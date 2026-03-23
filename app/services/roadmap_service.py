@@ -60,6 +60,10 @@ class RoadmapService:
         # 5. Generate Roadmap via LLM
         roadmap_dict = llm_service.generate_roadmap(context)
         
+        # Inject goal_id for frontend tracking
+        if isinstance(roadmap_dict, dict):
+            roadmap_dict["goal_id"] = goal_id
+
         # 6. Save to Cache
         if roadmap_dict and (roadmap_dict.get("phases") or roadmap_dict.get("roadmap_text")):
             try:
@@ -94,5 +98,37 @@ class RoadmapService:
             with open(cache_file, "r") as f:
                 return json.load(f)
         return None
+
+    def update_phase_status(self, user_id: str, goal_id: str, phase_index: int, completed: bool):
+        cache_file = os.path.join(settings.APP_DATA_DIR, f"{user_id}_{goal_id}_roadmap.json")
+        if not os.path.exists(cache_file):
+            return None
+        
+        with open(cache_file, "r") as f:
+            roadmap = json.load(f)
+        
+        phases = roadmap.get("phases", [])
+        if 0 <= phase_index < len(phases):
+            phases[phase_index]["completed"] = completed
+            
+        with open(cache_file, "w") as f:
+            json.dump(roadmap, f)
+            
+        return roadmap
+
+    def complete_roadmap(self, user_id: str, goal_id: str):
+        cache_file = os.path.join(settings.APP_DATA_DIR, f"{user_id}_{goal_id}_roadmap.json")
+        if not os.path.exists(cache_file):
+            return None
+            
+        with open(cache_file, "r") as f:
+            roadmap = json.load(f)
+            
+        roadmap["is_complete"] = True
+        
+        with open(cache_file, "w") as f:
+            json.dump(roadmap, f)
+            
+        return roadmap
 
 roadmap_service = RoadmapService()

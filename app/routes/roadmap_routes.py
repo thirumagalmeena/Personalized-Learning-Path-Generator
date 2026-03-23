@@ -29,6 +29,10 @@ def generate_roadmap(current_user_id: str = Depends(get_current_user)):
 def get_saved_roadmaps(current_user_id: str = Depends(get_current_user)):
     return roadmap_service.get_saved_roadmaps(current_user_id)
 
+@router.get("/feedback/user")
+def get_user_feedback(current_user_id: str = Depends(get_current_user)):
+    return feedback_service.get_user_feedback(current_user_id)
+
 @router.get("/{goal_id}", response_model=RoadmapResponse)
 def get_saved_roadmap(goal_id: str, current_user_id: str = Depends(get_current_user)):
     roadmap = roadmap_service.get_saved_roadmap(current_user_id, goal_id)
@@ -43,3 +47,17 @@ def submit_feedback(request: FeedbackRequest, current_user_id: str = Depends(get
     except Exception as e:
         logger.error(f"Error submitting feedback: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
+
+@router.patch("/{goal_id}/phase/{phase_index}")
+def update_phase_status(goal_id: str, phase_index: int, completed: bool, current_user_id: str = Depends(get_current_user)):
+    roadmap = roadmap_service.update_phase_status(current_user_id, goal_id, phase_index, completed)
+    if not roadmap:
+        raise HTTPException(status_code=404, detail="Roadmap or phase not found")
+    return roadmap
+
+@router.post("/{goal_id}/complete")
+def complete_roadmap(goal_id: str, current_user_id: str = Depends(get_current_user)):
+    roadmap = roadmap_service.complete_roadmap(current_user_id, goal_id)
+    if not roadmap:
+        raise HTTPException(status_code=404, detail="Roadmap not found")
+    return roadmap

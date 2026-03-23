@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { FiExternalLink, FiBook, FiCode, FiStar, FiX, FiRefreshCw, FiClock } from 'react-icons/fi';
-import { generateRoadmap, submitFeedback, getSavedRoadmap } from '../api/roadmap';
+import { FiExternalLink, FiBook, FiCode, FiStar, FiX, FiRefreshCw, FiClock, FiCheckCircle } from 'react-icons/fi';
+import { generateRoadmap, submitFeedback, getSavedRoadmap, updatePhaseStatus, completeRoadmap } from '../api/roadmap';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -110,6 +110,25 @@ export default function RoadmapPage() {
     }
   };
 
+  const handlePhaseToggle = async (index, currentStatus) => {
+    try {
+      const res = await updatePhaseStatus(goalId || roadmap.goal_id || 'default', index, !currentStatus);
+      setRoadmap(res.data);
+    } catch (err) {
+      console.error('Failed to update phase status', err);
+    }
+  };
+
+  const handleCompleteRoadmap = async () => {
+    try {
+      const res = await completeRoadmap(goalId || roadmap.goal_id || 'default');
+      setRoadmap(res.data);
+      alert('Congratulations! Roadmap marked as complete.');
+    } catch (err) {
+      console.error('Failed to complete roadmap', err);
+    }
+  };
+
   useEffect(() => { fetchRoadmap(); }, []);
 
   if (loading) return <LoadingSpinner message="Generating your personalized roadmap... This may take up to 30 seconds" />;
@@ -125,6 +144,8 @@ export default function RoadmapPage() {
   );
 
   const phases = roadmap?.phases || [];
+  const allPhasesComplete = phases.length > 0 && phases.every(p => p.completed);
+  const isRoadmapFinished = roadmap?.is_complete;
 
   return (
     <div className="page">
@@ -167,10 +188,19 @@ export default function RoadmapPage() {
                     <div className="card">
                       <div className="phase-header">
                         <span className="badge badge-primary">Phase {i + 1}</span>
-                        <h3 className="phase-title">{phase.title}</h3>
-                        {phase.duration && (
-                          <span className="badge badge-accent" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 4 }}><FiClock size={12} /> {phase.duration}</span>
-                        )}
+                        <h3 className="phase-title" style={{ textDecoration: phase.completed ? 'line-through' : 'none', color: phase.completed ? 'var(--color-text-muted)' : 'inherit' }}>{phase.title}</h3>
+                        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+                          {phase.duration && (
+                            <span className="badge badge-accent" style={{ display: 'flex', alignItems: 'center', gap: 4 }}><FiClock size={12} /> {phase.duration}</span>
+                          )}
+                          <button 
+                            className={`btn ${phase.completed ? 'btn-primary' : 'btn-outline'}`} 
+                            style={{ padding: '4px 12px', fontSize: '0.75rem', height: 'auto', gap: 6 }}
+                            onClick={() => handlePhaseToggle(i, phase.completed)}
+                          >
+                            <FiCheckCircle size={14} /> {phase.completed ? 'Completed' : 'Mark Complete'}
+                          </button>
+                        </div>
                       </div>
 
                       {/* Skill Tags */}
@@ -233,6 +263,35 @@ export default function RoadmapPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {phases.length > 0 && (
+              <div className="card" style={{ marginTop: 40, padding: 32, textAlign: 'center', border: allPhasesComplete ? '2px solid var(--color-primary)' : '1px solid var(--color-surface-hover)' }}>
+                <h3 style={{ marginBottom: 12 }}>Roadmap Completion</h3>
+                <p style={{ color: 'var(--color-text-muted)', marginBottom: 24 }}>
+                  {allPhasesComplete 
+                    ? "Great job! You've completed every phase in this roadmap." 
+                    : "Complete all phases to unlock the final roadmap feedback and completion."}
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: 16 }}>
+                  <button 
+                    className="btn btn-primary" 
+                    disabled={!allPhasesComplete || isRoadmapFinished}
+                    onClick={handleCompleteRoadmap}
+                    style={{ opacity: allPhasesComplete ? 1 : 0.5 }}
+                  >
+                    {isRoadmapFinished ? 'Roadmap Completed!' : 'Mark Roadmap as Complete'}
+                  </button>
+                  <button 
+                    className="btn btn-outline" 
+                    disabled={!allPhasesComplete}
+                    onClick={() => setFeedbackResource({ title: roadmap.goal_name || 'This Roadmap', type: 'roadmap', url: goalId })}
+                    style={{ opacity: allPhasesComplete ? 1 : 0.5 }}
+                  >
+                    Submit Roadmap Feedback
+                  </button>
+                </div>
               </div>
             )}
           </>

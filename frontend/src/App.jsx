@@ -6,6 +6,7 @@ import SkillAssessmentPage from './pages/SkillAssessmentPage';
 import MySkillsPage from './pages/MySkillsPage';
 import RoadmapPage from './pages/RoadmapPage';
 import SavedRoadmapsPage from './pages/SavedRoadmapsPage';
+import MyReviewsPage from './pages/MyReviewsPage';
 import './styles/global.css';
 
 function ProtectedRoute({ children }) {
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/roadmap" element={<ProtectedRoute><RoadmapPage /></ProtectedRoute>} />
         <Route path="/roadmap/:goalId" element={<ProtectedRoute><RoadmapPage /></ProtectedRoute>} />
         <Route path="/saved-roadmaps" element={<ProtectedRoute><SavedRoadmapsPage /></ProtectedRoute>} />
+        <Route path="/my-reviews" element={<ProtectedRoute><MyReviewsPage /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
