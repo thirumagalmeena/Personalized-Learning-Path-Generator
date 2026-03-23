@@ -29,3 +29,5 @@ dist/
 
 # Node (if you have frontend)
 node_modules/
+
+app/data/
