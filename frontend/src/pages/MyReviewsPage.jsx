@@ -51,7 +51,9 @@ export default function MyReviewsPage() {
               <div key={rev.feedback_id} className="card" style={{ padding: 24 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
                   <div>
-                    <h3 style={{ marginBottom: 4, fontSize: '1.1rem' }}>{rev.content_id.length > 50 ? rev.content_id.substring(0, 50) + '...' : rev.content_id}</h3>
+                    <h3 style={{ marginBottom: 4, fontSize: '1.1rem' }}>
+                      {String(rev.content_id).length > 50 ? String(rev.content_id).substring(0, 50) + '...' : rev.content_id}
+                    </h3>
                     <span className="badge badge-surface" style={{ textTransform: 'uppercase', fontSize: '0.7rem' }}>{rev.content_type}</span>
                   </div>
                   <div style={{ display: 'flex', gap: 2 }}>
@@ -70,7 +72,7 @@ export default function MyReviewsPage() {
                     "{rev.comments}"
                   </p>
                 )}
-                {rev.content_type === 'resource' && rev.content_id.startsWith('http') && (
+                {rev.content_type === 'resource' && typeof rev.content_id === 'string' && rev.content_id.startsWith('http') && (
                   <a href={rev.content_id} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.82rem', color: 'var(--color-primary)', fontWeight: 600 }}>
                     <FiExternalLink size={14} /> View Material
                   </a>

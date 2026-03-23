@@ -1,4 +1,5 @@
 import uuid
+import pandas as pd
 from app.utils.csv_handler import csv_handler
 from app.models.schemas import FeedbackRequest
 
@@ -25,7 +26,14 @@ class FeedbackService:
             
             # Ensure user_id is compared correctly (as string)
             user_df = df[df['user_id'].astype(str) == str(user_id)]
-            return user_df.to_dict(orient='records')
+            
+            # Replace NaNs with None so it's JSON serializable
+            records = user_df.to_dict(orient='records')
+            for row in records:
+                for k, v in row.items():
+                    if pd.isna(v):
+                        row[k] = None
+            return records
         except Exception as e:
             from app.utils.logger import logger
             logger.error(f"Error in get_user_feedback: {e}")
