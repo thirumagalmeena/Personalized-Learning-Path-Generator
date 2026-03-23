@@ -1,11 +1,14 @@
 # Personalized Learning Path Generator
 
 ## Description
-A production-ready FastAPI backend that generates personalized learning paths based on your experience, goals, and missing skills. It natively runs Ollama (with HuggingFace fallback) fully locally. It features JWT authentication, semantic RAG matching with `sentence-transformers`, dependency enforcement graph, and LLM structured prompt extraction.
+A production-ready FastAPI backend that generates personalized learning paths based on your experience, goals, and missing skills. It utilizes **Groq** for high-speed LLM generation (with HuggingFace fallback), features JWT authentication, semantic RAG matching with `sentence-transformers`, dependency enforcement graphs, and LLM structured prompt extraction. 
+
+**Agentic Web Research:** The platform integrates the **Tavily API** to autonomously search the live internet. Instead of relying solely on static CSV datasets, it fetches the most recent, trending online courses and YouTube videos tailored perfectly to the user's missing skills.
 
 ## Requirements
 - Python 3.9+
-- Ollama installed locally (https://ollama.ai)
+- Groq API Key (for fast LLM generation)
+- Tavily API Key (for live Agentic Web Research)
 
 ## Setup & Run Instructions
 
@@ -20,12 +23,13 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Setup Ollama
-Ensure you have pulled the correct model (default is mistral):
-```bash
-ollama run mistral
+### 2. Environment Variables
+Create an `app/.env` file in your root project directory (or directly inside `app/`) and populate it:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+TAVILY_API_KEY=your_tavily_api_key_here
+SECRET_KEY=super-secret-jwt-key
 ```
-Keep the Ollama server running in the background. Note: The app defaults to calling `http://localhost:11434`, configurable via `OLLAMA_BASE_URL` in `.env`.
 
 ### 3. Start the Server
 Start the FastAPI server through `uvicorn`:
@@ -36,7 +40,14 @@ The API runs on `http://localhost:8000`.
 Interactive Swagger UI Docs are found at `http://localhost:8000/docs`.
 
 ### 4. Provide Optional Datasets
-The application dynamically initializes the `.csv` schemas in `dataset/` if they do not exist. To improve RAG matching, populate `dataset/resources.csv` and `dataset/projects.csv` with mock or real data. The `.csv` headers correspond exactly to what is read in `csv_handler.py`.
+The application dynamically initializes the `.csv` schemas in `dataset/` if they do not exist. To improve customized RAG matching alongside the live web search, you can populate `dataset/resources.csv` and `dataset/projects.csv` with proprietary data. 
+
+## Testing Agentic Research
+To verify that the Tavily web search integration is working successfully, you can run the test script included at the root:
+```bash
+python test_tavily.py
+```
+This simulates a search for missing skills and prints the top real-time courses and video links retrieved from the web.
 
 ## Example Usage
 
@@ -55,21 +66,13 @@ curl -X POST "http://localhost:8000/auth/login" \
 ```
 *Save the `access_token` from the response.*
 
-### 3. Extract Skills from Free Text
-```bash
-curl -X POST "http://localhost:8000/users/extract-skills" \
- -H "Authorization: Bearer <access_token>" \
- -H "Content-Type: application/json" \
- -d '{"free_text": "I really want to get good at Python and Machine Learning, maybe a little bit of Pandas for data cleaning."}'
-```
-
-### 4. Generate Personalized Roadmap
+### 3. Generate Personalized Roadmap
 ```bash
 curl -X POST "http://localhost:8000/roadmap/generate-roadmap" \
  -H "Authorization: Bearer <access_token>"
 ```
 
-### 5. Submit Feedback
+### 4. Submit Feedback
 ```bash
 curl -X POST "http://localhost:8000/roadmap/feedback" \
  -H "Authorization: Bearer <access_token>" \
@@ -78,11 +81,10 @@ curl -X POST "http://localhost:8000/roadmap/feedback" \
 ```
 
 ## Structure
-- `app/` -> the main Fast Api Application code.
+- `app/` -> the main FastAPI Application code.
   - `routes/` -> API Endpoint definitions using APIRouters.
-  - `services/` -> Modular logic blocks including Auth, Embeddings caching, RAG retrieval, DB gap analysis.
+  - `services/` -> Modular logic blocks including Auth, RAG retrieval, DB gap analysis, and the **Web Search Service** via Tavily.
   - `models/` -> Pydantic validations
   - `utils/` -> Thread-safe `pandas` CSV handler, Python-Jose Token verification, Settings manager.
 - `app/data/` -> Auto-generated embeddings caching files and application logs.
 - `dataset/` -> Auto-generated CSV files that act as the persistent data storage DB.
-
