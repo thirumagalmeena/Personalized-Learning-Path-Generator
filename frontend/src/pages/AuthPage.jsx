@@ -47,7 +47,7 @@ export default function AuthPage() {
         // Since we don't have a /me endpoint, we'll redirect returning users to /roadmap
         // and new users (just registered) always go to /onboarding
         // For login: we redirect to /roadmap, which will bounce back if no profile is set
-        navigate('/roadmap');
+        navigate('/home');
       } else {
         navigate('/onboarding');
       }

@@ -48,8 +48,13 @@ export default function SavedRoadmapsPage() {
                   <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
                     <FiCompass size={32} color="var(--color-primary)" />
                   </div>
-                  <div className="goal-name" style={{ fontSize: '1.2rem', marginBottom: 12, textAlign: 'center' }}>
+                  <div className="goal-name" style={{ fontSize: '1.2rem', marginBottom: 8, textAlign: 'center' }}>
                     {r.goal_name}
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+                    <span className={`badge ${r.is_complete ? 'badge-primary' : 'badge-surface'}`} style={{ fontSize: '0.75rem' }}>
+                      {r.is_complete ? 'Completed' : 'In Progress'}
+                    </span>
                   </div>
                   <button className="btn btn-outline" style={{ width: '100%', padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}>
                     View <FiArrowRight size={14} />

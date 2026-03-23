@@ -89,7 +89,17 @@ class RoadmapService:
                         matches = goals_df[goals_df["goal_id"].astype(str) == goal_id]
                         if not matches.empty:
                             goal_name = matches.iloc[0]["goal_name"]
-                    saved.append({"goal_id": goal_id, "goal_name": goal_name})
+                            
+                    is_complete = False
+                    try:
+                        roadmap_path = os.path.join(settings.APP_DATA_DIR, filename)
+                        with open(roadmap_path, "r") as f:
+                            rdata = json.load(f)
+                            is_complete = rdata.get("is_complete", False)
+                    except Exception:
+                        pass
+                        
+                    saved.append({"goal_id": goal_id, "goal_name": goal_name, "is_complete": is_complete})
         return saved
 
     def get_saved_roadmap(self, user_id: str, goal_id: str):
@@ -128,6 +138,51 @@ class RoadmapService:
         
         with open(cache_file, "w") as f:
             json.dump(roadmap, f)
+            
+        # Add learned skills
+        try:
+            learned_skills = set()
+            for phase in roadmap.get("phases", []):
+                for skill in phase.get("skills", []):
+                    learned_skills.add(skill)
+                    
+            if learned_skills:
+                skills_df = csv_handler.read_csv("skills.csv")
+                user_skills_df = csv_handler.read_csv("user_skills.csv")
+                
+                for skill_name in learned_skills:
+                    # 1. find or create skill_id
+                    match = None
+                    if not skills_df.empty and 'skill_name' in skills_df.columns:
+                        match = skills_df[skills_df['skill_name'].astype(str).str.lower() == str(skill_name).lower()]
+                        
+                    if match is not None and not match.empty:
+                        skill_id = str(match.iloc[0]['skill_id'])
+                    else:
+                        import uuid
+                        skill_id = str(uuid.uuid4())
+                        csv_handler.append_row("skills.csv", {
+                            "skill_id": skill_id,
+                            "skill_name": str(skill_name),
+                            "category": "Learned from Roadmap"
+                        })
+                        skills_df = csv_handler.read_csv("skills.csv")
+                        
+                    # 2. Add to user_skills if not exists
+                    exists = False
+                    if not user_skills_df.empty:
+                        exists = not user_skills_df[(user_skills_df['user_id'].astype(str) == str(user_id)) & (user_skills_df['skill_id'].astype(str) == skill_id)].empty
+                        
+                    if not exists:
+                        csv_handler.append_row("user_skills.csv", {
+                            "user_id": str(user_id),
+                            "skill_id": skill_id,
+                            "proficiency": 1
+                        })
+                        user_skills_df = csv_handler.read_csv("user_skills.csv")
+        except Exception as e:
+            from app.utils.logger import logger
+            logger.error(f"Error adding learned skills on roadmap completion: {e}")
             
         return roadmap
 

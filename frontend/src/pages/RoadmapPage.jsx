@@ -154,7 +154,14 @@ export default function RoadmapPage() {
       <div className="container">
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 36, flexWrap: 'wrap', gap: 16 }}>
           <div>
-            <h1 style={{ fontSize: '1.9rem', marginBottom: 6 }}>Your Learning Roadmap</h1>
+            <h1 style={{ fontSize: '1.9rem', marginBottom: 6, display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+              Your Learning Roadmap
+              {isRoadmapFinished !== undefined && (
+                <span className={`badge ${isRoadmapFinished ? 'badge-primary' : 'badge-surface'}`} style={{ fontSize: '0.9rem' }}>
+                  {isRoadmapFinished ? 'Completed' : 'In Progress'}
+                </span>
+              )}
+            </h1>
             <p style={{ color: 'var(--color-text-muted)' }}>
               {phases.length} phases • Personalized just for you
             </p>

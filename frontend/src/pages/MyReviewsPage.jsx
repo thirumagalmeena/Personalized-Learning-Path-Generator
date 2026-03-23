@@ -58,11 +58,11 @@ export default function MyReviewsPage() {
                   </div>
                   <div style={{ display: 'flex', gap: 2 }}>
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <FiStar 
-                        key={s} 
-                        size={16} 
-                        fill={s <= rev.rating ? 'var(--color-accent)' : 'none'} 
-                        color={s <= rev.rating ? 'var(--color-accent)' : 'var(--color-surface-hover)'} 
+                      <FiStar
+                        key={s}
+                        size={16}
+                        fill={s <= rev.rating ? '#FDCC0D' : 'none'}
+                        color={s <= rev.rating ? '#FDCC0D' : 'var(--color-surface-hover)'}
                       />
                     ))}
                   </div>
