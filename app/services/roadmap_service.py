@@ -1,6 +1,7 @@
 from app.services.gap_analysis import gap_analysis_service
 from app.services.rag_service import rag_service
 from app.services.llm_service import llm_service
+from app.services.web_search_service import web_search_service
 from app.services.auth_service import auth_service
 from app.utils.config import settings
 from app.utils.csv_handler import csv_handler
@@ -44,6 +45,16 @@ class RoadmapService:
         
         # 3. Retrieve RAG context
         rag_context = rag_service.retrieve_context(missing_skills)
+        
+        # 3.5 Retrieve live web resources (Agentic Research)
+        try:
+            live_resources = web_search_service.search_courses(missing_skills)
+            if live_resources:
+                if "resources" not in rag_context:
+                    rag_context["resources"] = []
+                rag_context["resources"].extend(live_resources)
+        except Exception:
+            pass # fail gracefully if web search fails
         
         # 4. Construct Context for LLM
         context = {

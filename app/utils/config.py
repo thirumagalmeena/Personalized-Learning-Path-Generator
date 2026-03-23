@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
     HF_FALLBACK_MODEL: str = "HuggingFaceH4/zephyr-7b-beta"
+    TAVILY_API_KEY: str = os.getenv("TAVILY_API_KEY", "")
     
     # Embeddings
     EMBEDDINGS_MODEL: str = "all-MiniLM-L6-v2"
